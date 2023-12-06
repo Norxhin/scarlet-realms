@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-links">
+            <div class="dd-world1">
+                <a href="barowyn.html">Barowyn</a>
+                <div class="dd-content dd-world1-content">
+                    <ul>
+                        <li>
+                            <a href="map1">
+                                <div class="dd-link">World Map</div>
+                            </a>
+                        </li>
+                        <!--
+                        <hr>
+                        <li>
+                            <a href="other">
+                                <div class="dd-link">Something Else</div>
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="dd-vault">
+                <a href="vault.html">Vault Hunters</a>
+                <div class="dd-content dd-vault-content">
+                    <ul>
+                        <li>
+                            <a href="vmap">
+                                <div class="dd-link">World Map</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="armory">
+                                <div class="dd-link">Armory</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="https://vault-hunters.fandom.com/wiki/Vault_Hunters_Wiki" target="_blank">
+                                <div class="dd-link">Modpack Wiki</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dd-home">
+                <a href="index.html">
+                    <img src="./img/alpha.webp" width="100%" style="max-width: 200px">
+                </a>
+            </div>
+            <div class="dd-vanilla">
+                <a href="vanilla.html">Vanilla</a>
+            </div>
+            <div class="dd-sources">
+                <a href="sources">Resources</a>
+                <div class="dd-content dd-sources-content">
+                    <ul>
+                        <li>
+                            <a href="https://minecraft.wiki" target="_blank">
+                                <div class="dd-link">Minecraft Wiki</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="calc">
+                                <div class="dd-link">Calculator</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="files">
+                                <div class="dd-link">Modpack Files</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr size="2" color="black" style="margin-bottom:2%;">
+    <div class="hero-img-container">
+        <div class="hero-img-content">
+            <div class="img-box">
+                <img src="./img/recrafted-img1.png" width="100%">
+            </div>
+            <div class="img-box-caption">
+                <h1>The Scarlet Realms Await</h1>
+                <hr>
+                <p>The <span>Scarlet Realms</span> are a set of multiplayer Minecraft servers designed to allow you to explore new lands, team up with friends on incredible adventures, and unleash your creativity! There are a total of 3 different servers to choose from: <b>Barowyn</b>, <b>Vault Hunters</b>, and <b>Vanilla</b>.</p>
+                <p>Each server provides a different gameplay experience - the combination of servers ensures that there is at least one world that suits each individual playstyle!</p>
+            </div>
+        </div>
+    </div>
+    <div class="tabset-container">
+        <div id="Barowyn" class="tabcontent">
+            <a href="barowyn.html">
+                <img src="./img/sr-modworld-logo.webp">
+            </a>
+            <p>The <b>Barowyn Server</b> is running a custom modpack designed by Norxhin for Fabric. The server is running Minecraft version 1.20.1 and contains more than <b>150</b> mods that have been integrated to create the ideal modded experience.</p>
+            <p>Mods range from optimization and feature tweaks, to larger content mods such as <b>Bosses of Mass Destruction</b>, <b>Create</b>, <b>Illager Invasion</b>, <b>Naturalist</b>, and much more!</p>
+            <p>The world uses custom terrain generation, and the included datapack contains nearly <b>2,000</b> tweaks to recipes and loot tables with the goals of mod integration and internal consistency.</p>
+        </div>
+        <div id="VH" class="tabcontent">
+            <a href="vault">
+                <img src="./img/sr-vault-logo.webp">
+            </a>
+            <p>The <b>Scarlet Realms Vault Hunters World</b> is running the 3rd edition of the <a href="https://vaulthunters.gg/" target="_blank">Vault Hunters Modpack</a> from Team Iskallia on Minecraft version 1.18.2</p>
+            <p>Vault Hunters is an RPG-based modpack that features procedurally generated dungeons that players will fight and loot their way through to collect powerful gear, tools, currency, and more to take on more and more difficult vaults!</p>
+            <p>The objective of the modpack is to collect <b>25 unique artifacts</b>, which unlocks the final boss fight. Players can tackle vaults solo, or in a party with their friends.</p>
+        </div>
+        <div id="Vanilla" class="tabcontent">
+            <a href="vanilla">
+                <img src="./img/sr-vanilla-logo.webp">
+            </a>
+            <p>The classic Minecraft experience! The Vanilla server is running the most recent version of Minecraft, 1.20.2. Only small performance improvement tweaks have been added, with everything else staying true to vanilla form.</p>
+        </div>
+
+        <div class="tablink-container">
+            <button class="tablink tl-barowyn" onclick="openTab('Barowyn')" id="defaultOpen">Barowyn</button>
+            <button class="tablink tl-vh" onclick="openTab('VH')">Vault Hunters</button>
+            <button class="tablink tl-vanilla" onclick="openTab('Vanilla')">Vanilla</button>
+        </div>
+    </div>
+    <div class="img-caption-container flex-left">
+        <div class="img-box" id="left-img-box">
+            <img src="./img/recrafted-img1.png" width="100%">
+        </div>
+        <div class="img-box-caption" id="left-caption-box">
+            <h1>The Scarlet Realms Await</h1>
+            <hr>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </div>
+    <div class="img-caption-container flex-right">
+        <div class="img-box-caption" id="right-caption-box">
+            <h1>The Scarlet Realms Await</h1>
+            <hr>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+        <div class="img-box" id="right-img-box">
+            <img src="./img/recrafted-img1.png" width="100%">
+        </div>
+    </div>
+</body>
+<script src="./js/home.js"></script>
+</html>
