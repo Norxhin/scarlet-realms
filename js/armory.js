@@ -258,7 +258,7 @@ function loadPlayers() {
         }
         uuhttp[i].send();
     }
-    setTimeout(setActive, 50, n = scrollIndex);
+    setTimeout(setActive, 200, n = scrollIndex);
 }
 
 jshttp.onload = function() {
@@ -662,7 +662,7 @@ trhttp.onload = function() {
 trhttp.open("GET", "../db/trinkets.json");
 trhttp.send();
 
-setTimeout(loadPlayers, 50);
+setTimeout(loadPlayers, 200);
 
 for(let i = 0; i < gears.length; i++) {
     gears[i].addEventListener("mouseenter", function() {
