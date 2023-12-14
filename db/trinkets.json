@@ -1,0 +1,77 @@
+{
+    "trinkets": {
+        "chromatic_powder": {
+                "text": "-50% vault gear damage"
+        },
+        "clover": {
+            "text": "+25% Lucky Hit chance"
+        },
+        "crystal_ball": {
+            "text": "+100% Mana"
+        },
+        "cufflinks": {
+            "text": "+50% Cooldown Reduction"
+        },
+        "giants_heart": {
+            "text": "+25% Max Health"
+        },
+        "idonas_blade": {
+            "text": "+100% Soul Chance"
+        },
+        "lucky_goose": {
+            "text": "+50% Item Rarity"
+        },
+        "phylactery": {
+            "text": "+50% Mana Regeneration"
+        },
+        "spellbook": {
+            "text": "+50% Ability Power"
+        },
+        "tenos_charm": {
+            "text": "+25% Item Quantity"
+        },
+        "carapace": {
+            "text": "Grants immunity to Poison, Slowness, Mining Fatigue and Fire"
+        },
+        "cat_in_a_jar": {
+            "text": "Grants a dodge chance for incoming projectiles and removes block damage from explosions"
+        },
+        "centipede_feet": {
+            "text": "Allows wall climbing and grants you immunity to Kinetic Damage"
+        },
+        "chromatic_feather": {
+            "text": "Grants triple jump"
+        },
+        "elven_socks": {
+            "text": "Removes any and all fall damage"
+        },
+        "ender_anchor": {
+            "text": "Makes items automatically teleport to you when in range of your Magnet"
+        },
+        "gluttony_pendant": {
+            "text": "Grants instant eating, and potion consuming speed"
+        },
+        "golden_burger": {
+            "text": "Doubles the Vault Experience gained inside a vault"
+        },
+        "high_heels": {
+            "text": "Grants the ability to walk up full blocks"
+        },
+        "night_vision_goggles": {
+            "text": "Grants vision of chests and coin piles, with their associated color, in a nearby area around you"
+        },
+        "stone_of_jordan": {
+            "text": "+1 to all learned abilities"
+        },
+        "velaras_petal": {
+            "text": "+1 Regeneration"
+        },
+        "wendarrs_hourglass": {
+            "text": "Adds 2 minutes and 30 seconds to the Vault Timer"
+        },
+        "wings": {
+            "text": "Gives the player elytra"   
+        }
+    },
+    "charms": {}
+}

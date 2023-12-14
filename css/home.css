@@ -35,7 +35,7 @@ span {
     align-items: center;
     margin: auto;
     font-family: philosopher, sans-serif;
-    font-size: 1.7vw;
+    font-size: 2em;
 }
 .banner-links > div {
     width: 20%;
@@ -225,7 +225,7 @@ span {
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    font-size: 17px;
+    font-size: 1.1em;
     width: calc(100% / 3);
     border-color: black;
     border-style: none solid none none;
