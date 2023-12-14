@@ -1,0 +1,239 @@
+/*****Armory*****/
+.armory-container {
+    background-image: url("../css/images/red-tattered-bg.webp");
+    background-size: 85% 100%;
+    background-repeat: no-repeat;
+    background-position-x: 75%;
+    padding: 40px 0;
+}
+
+/***Scroll***/
+.scroll-header {
+    text-align: center;
+    background-color: #EEEEEE;
+}
+.scroll-header h2 {
+    margin: 0;
+}
+.scroll-bar {
+    /*display: flex;*/
+    max-width: 40%;
+    margin: 20px auto;
+}
+.scroll-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scroll-items {
+    display: flex;
+    width: 100%;
+}
+.scroll-element {
+    text-align: center;
+    width: 20%;
+    padding: 8px 4px;
+    background-color: #EEEEEE;
+    border-color: #555555;
+    border-style: solid;
+    border-width: 2px 1px;
+}
+.scroll-active {
+    background-color: #CCCCCC;
+}
+.nempty:hover {
+    cursor: pointer;
+    background-color: #CCCCCC;
+}
+.elempty {
+    background-color: #777777;
+}
+.scroll-element p {
+    margin: 0;
+}
+.scroll-hide {
+    display: none;
+}
+.scroll-btn {
+    background-color: #EEEEEE;
+}
+
+/**Header**/
+.armory-header {
+    display: flex;
+    width: 80%;
+    margin: 0 5% 0 15%;
+    color: #FDF1DB;
+    text-shadow: 2px 2px black;
+}
+#armory-header-stats {
+    width: 23.75%;
+    text-align: center;
+}
+#armory-header-selector {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+#selector-abilities {
+    cursor: default !important;
+    color: #555555;
+}
+#selector-talents {
+    cursor: default !important;
+    color: #555555;
+}
+#selector-expertise {
+    cursor: default !important;
+    color: #555555;
+}
+#armory-header-selector > div {
+    margin: 0 5px;
+    cursor: pointer;
+}
+#armory-header-gear {
+    width: 36.25%;
+    text-align: center;
+}
+
+/***Main Content***/
+.armory-content {
+    display: flex;
+    width: 80%;
+    margin: 0 5% 0 15%;
+}
+.stat-block {
+    display: flex;
+    font-size: 1.3em;
+}
+.stat-block h4 {
+    margin: 20px 0;
+}
+.stat-label {
+    width: 60%;
+}
+
+/**Stat Box**/
+.armory-sidebar-left {
+    width: 23.75%;
+    margin-top: 20px;
+    color: #FDF1DB;
+}
+.adv-stats {
+    display: none;
+}
+
+/**Skin Box**/
+.armory-img-box{
+    text-align: center;
+    width: 40%;
+    color: #FDF1DB;
+}
+#progressBar {
+    width: 80%;
+    margin: auto;
+    height: 10px;
+    background-color: white;
+}
+#lvProgress {
+    width: 0%;
+    height: 10px;
+    background-color: #E00543;
+}
+
+/**Gear Box**/
+.armory-sidebar-right {
+    width: 36.25%;
+}
+
+.gear-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+.gear-item {
+    display: flex;
+    width: calc(100% / 3);
+    height: 104px;
+    align-items: center;
+}
+.gear-blank {
+    width: calc(100% / 3);
+}
+.gear-box {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(85, 85, 85, 0.6);
+    border-style: solid;
+    border-color: rgba(85, 85, 85);
+    border-width: 4px;
+    /*margin-bottom: 40px;*/
+}
+.gear-label {
+    margin: 0 5px;
+    text-shadow: 2px 2px black;
+}
+.gear-icon {
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+.box-left {
+    margin-left: 0;
+    margin-right: auto;
+}
+.box-right {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+.gear-tooltip {
+    display: none;
+    width: 200px;
+    max-height: 400px;
+    z-index: 1000;
+    background-color: black;
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.gear-tooltip h2, .gear-tooltip p {
+    color: #fdf1db;
+    margin: 0;
+}
+.gear-tooltip h2 {
+    font-size: 1.1em;
+}
+.gear-tooltip p {
+    font-size: 0.8em;
+}
+.gear-tooltip ul {
+    list-style-type: none;
+    color: #fdf1db;
+    margin: 0;
+}
+.gear-tooltip li {
+    font-size: 0.8em;
+}
+.gear-tooltip span {
+    color: #fdf1db;
+    font-weight: 800;
+}
+
+.armory-sidebar-right .adv-stats {
+    color: #fdf1db;
+    max-height: 450px;
+    overflow: scroll;
+}
+.armory-sidebar-right .adv-stats::-webkit-scrollbar {
+    display: none;
+}

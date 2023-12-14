@@ -1,0 +1,190 @@
+/*****Armory*****/
+/***Scroll***/
+.scroll-header {
+    text-align: center;
+    background-color: #EEEEEE;
+}
+.scroll-header h2 {
+    margin: 0;
+}
+.scroll-bar {
+    /*display: flex;*/
+    max-width: 40%;
+    margin: 20px auto;
+}
+.scroll-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scroll-items {
+    display: flex;
+    width: 100%;
+}
+.scroll-element {
+    text-align: center;
+    width: 20%;
+    padding: 8px 4px;
+    background-color: #EEEEEE;
+    border-color: #555555;
+    border-style: solid;
+    border-width: 2px 1px;
+}
+.scroll-active {
+    background-color: #CCCCCC;
+}
+.nempty:hover {
+    cursor: pointer;
+    background-color: #CCCCCC;
+}
+.elempty {
+    background-color: #777777;
+}
+.scroll-element p {
+    margin: 0;
+}
+.scroll-hide {
+    display: none;
+}
+.scroll-btn {
+    background-color: #EEEEEE;
+}
+
+/***Main Content***/
+.armory-content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.stat-block {
+    display: flex;
+}
+.stat-label {
+    width: 60%;
+}
+
+/**Header**/
+.armory-header {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+#armory-header-stats {
+    width: 30%;
+}
+#armory-header-blank {
+    width: 40%;
+}
+#armory-header-gear {
+    width: 30%;
+    text-align: center;
+}
+
+/**Stat Box**/
+.armory-sidebar-left {
+    width: 30%;
+    margin-top: 20px;
+}
+.adv-stats {
+    display: none;
+}
+
+/**Skin Box**/
+.armory-img-box{
+    text-align: center;
+    width: 40%;
+}
+#progressBar {
+    width: 80%;
+    margin: auto;
+    height: 10px;
+    background-color: white;
+}
+#lvProgress {
+    width: 0%;
+    height: 10px;
+    background-color: #E00543;
+}
+
+/**Gear Box**/
+.armory-sidebar-right {
+    width: 30%;
+}
+
+.gear-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+.gear-item {
+    display: flex;
+    max-width: 50%;
+    height: 104px;
+    align-items: center;
+}
+.gear-box {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(85, 85, 85, 0.6);
+    border-style: solid;
+    border-color: rgba(85, 85, 85);
+    border-width: 4px;
+    /*margin-bottom: 40px;*/
+}
+.gear-label {
+    margin: 0 5px;
+}
+.gear-icon {
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+.box-left {
+    margin-left: 0;
+    margin-right: auto;
+}
+.box-right {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+.gear-tooltip {
+    display: none;
+    width: 250px;
+    max-height: 400px;
+    z-index: 1000;
+    background-color: black;
+    position: absolute;
+    padding: 20px;
+    text-align: left;
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.gear-tooltip h2, .gear-tooltip p {
+    color: white;
+    margin: 0;
+}
+.gear-tooltip h2 {
+    font-size: 1.1em;
+}
+.gear-tooltip p {
+    font-size: 1em;
+}
+.gear-tooltip ul {
+    list-style-type: none;
+    color: white;
+    margin: 0;
+}
+.gear-tooltip li {
+    font-size: 1em;
+}
+.gear-tooltip span {
+    color: white;
+    font-weight: 800;
+}

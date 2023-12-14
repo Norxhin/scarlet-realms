@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/barowyn.css" />
+  <link rel="stylesheet" href="../css/armory.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-links">
+            <div class="dd-world1">
+                <a href="../barowyn.html">Barowyn</a>
+                <div class="dd-content dd-world1-content">
+                    <ul>
+                        <li>
+                            <a href="map1">
+                                <div class="dd-link">World Map</div>
+                            </a>
+                        </li>
+                        <!--
+                        <hr>
+                        <li>
+                            <a href="other">
+                                <div class="dd-link">Something Else</div>
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="dd-vault">
+                <a href="../vault.html">Vault Hunters</a>
+                <div class="dd-content dd-vault-content">
+                    <ul>
+                        <li>
+                            <a href="vmap">
+                                <div class="dd-link">World Map</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="armory">
+                                <div class="dd-link">Armory</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="https://vault-hunters.fandom.com/wiki/Vault_Hunters_Wiki" target="_blank">
+                                <div class="dd-link">Modpack Wiki</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dd-home">
+                <a href="../index.html">
+                    <img src="../img/alpha.webp" width="100%" style="max-width: 200px">
+                </a>
+            </div>
+            <div class="dd-vanilla">
+                <a href="../vanilla.html">Vanilla</a>
+            </div>
+            <div class="dd-sources">
+                <a href="sources">Resources</a>
+                <div class="dd-content dd-sources-content">
+                    <ul>
+                        <li>
+                            <a href="https://minecraft.wiki" target="_blank">
+                                <div class="dd-link">Minecraft Wiki</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="calc">
+                                <div class="dd-link">Calculator</div>
+                            </a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="files">
+                                <div class="dd-link">Modpack Files</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="armory-container">
+        <div class="armory-header">
+            <h2 id="armory-header-stats">Statistics</h2>
+            <h2 id="armory-header-blank"></h2>
+            <h2 id="armory-header-gear">Vault Gear</h2>
+        </div>
+        <div class="armory-content">
+            
+            <div class="armory-sidebar-left">
+                <div class="basic-stats">
+                    <!--<h2>Statistics</h2>-->
+                    <div class="stat-block">
+                        <h4 class="stat-label">Damage</h4><h4 id="statDmgAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Ability Power</h4><h4 id="statAbilityAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Health</h4><h4 id="statHealthAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Defense</h4><h4 id="statDefenseAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Mana</h4><h4 id="statManaAmount"></h4>
+                    </div>
+                </div>
+                <div class="adv-stats">
+                    <div class="stat-block">
+                        <h4 class="stat-label">Total Vaults</h4><h4 id="statVTotal"></h4>
+                    </div>
+                    <hr>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Vaults Completed</h4><h4 id="statVComplete"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Vaults Abandoned</h4><h4 id="statVAbandon"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Vaults Failed</h4><h4 id="statVFailed"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="armory-img-box">
+                <h1 id="hunterName"></h1>
+                <img id="armory-img" src="">
+                <h2 id="vaultLevel"></h2>
+                <div id="progressBar"><div id="lvProgress"></div></div>
+            </div>
+            <div class="armory-sidebar-right">
+                <div class="basic-stats">
+                    <!--<h2>Vault Gear</h2>-->
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-charm">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Charm</h2>
+                        </div>
+                        <div class="gear-item box-right" id="gear-head">
+                            <h2 class="gear-label">Vault Helmet</h2>
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-blue-trinket">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Blue Trinket</h2>
+                        </div>
+                        <div class="gear-item box-right" id="gear-chest">
+                            <h2 class="gear-label">Vault Chestplate</h2>
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-red-trinket">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Red Trinket</h2>
+                        </div>
+                        <div class="gear-item box-right" id="gear-legs">
+                            <h2 class="gear-label">Vault Leggings</h2>
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-belt">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Magnet</h2>
+                        </div>
+                        <div class="gear-item box-right" id="gear-feet">
+                            <h2 class="gear-label">Vault Boots</h2>
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-offhand">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Shield</h2>
+                        </div>
+                        <div class="gear-item box-right" id="gear-mainhand">
+                            <h2 class="gear-label">Vault Sword</h2>
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="adv-stats">
+
+                </div>
+            </div>
+        </div>
+        <div class="scroll-bar">
+            <div class="scroll-header">
+                <h2>Active Hunters</h2>
+            </div>
+            <div class="scroll-content">
+                <a class="scroll-btn" onclick="moveScroll(-1)">&#10094;</a>
+                <div id="scroll-items"></div>
+                <a class="scroll-btn" onclick="moveScroll(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+    <hr size="2" color="black" style="margin-bottom:2%;">
+    <div class="banner-img">
+        <img src="../img/sr-vault-banner.webp" width="100%">
+    </div>
+    <hr size="2" color="black" style="margin-top:2%;">
+</body>
+
+<script src="../js/armory.js"></script>
+</html>

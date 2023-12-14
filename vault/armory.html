@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <link rel="stylesheet" href="../css/home.css" />
   <link rel="stylesheet" href="../css/barowyn.css" />
+  <link rel="stylesheet" href="../css/armory.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
 </head>
@@ -12,7 +14,7 @@
     <div class="banner">
         <div class="banner-links">
             <div class="dd-world1">
-                <a href="barowyn.html">Barowyn</a>
+                <a href="../barowyn.html">Barowyn</a>
                 <div class="dd-content dd-world1-content">
                     <ul>
                         <li>
@@ -31,7 +33,7 @@
                 </div>
             </div>
             <div class="dd-vault">
-                <a href="vault.html">Vault Hunters</a>
+                <a href="../vault.html">Vault Hunters</a>
                 <div class="dd-content dd-vault-content">
                     <ul>
                         <li>
@@ -41,7 +43,7 @@
                         </li>
                         <hr>
                         <li>
-                            <a href="armory">
+                            <a href="armory.html">
                                 <div class="dd-link">Armory</div>
                             </a>
                         </li>
@@ -51,16 +53,22 @@
                                 <div class="dd-link">Modpack Wiki</div>
                             </a>
                         </li>
+                        <hr>
+                        <li>
+                            <a href="https://vault-hunters.netlify.app/gear" target="_blank">
+                                <div class="dd-link">Gear Calculator</div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="dd-home">
-                <a href="index.html">
+                <a href="../index.html">
                     <img src="../img/alpha.webp" width="100%" style="max-width: 200px">
                 </a>
             </div>
             <div class="dd-vanilla">
-                <a href="vanilla.html">Vanilla</a>
+                <a href="../vanilla.html">Vanilla</a>
             </div>
             <div class="dd-sources">
                 <a href="sources">Resources</a>
@@ -88,5 +96,285 @@
             </div>
         </div>
     </div>
+    <div class="armory-container">
+        <div class="armory-header">
+            <h2 id="armory-header-stats">Statistics</h2>
+            <div id="armory-header-selector">
+                <div id="selector-basic" onclick="statSwap(0)"><h3>Basic</h3></div>
+                <div id="selector-advanced" onclick = "statSwap(1)"><h3>Advanced</h3></div>
+                <div id="selector-abilities"><h3>Abiities</h3></div>
+                <div id="selector-talents"><h3>Talents</h3></div>
+                <div id="selector-expertise"><h3>Expertise</h3></div>
+            </div>
+            <h2 id="armory-header-gear">Vault Gear</h2>
+        </div>
+        <div class="armory-content">
+            <div class="armory-sidebar-left">
+                <div class="basic-stats">
+                    <!--<h2>Statistics</h2>-->
+                    <div class="stat-block">
+                        <h4 class="stat-label">Damage</h4><h4 id="statDmgAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Ability Power</h4><h4 id="statAbilityAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Health</h4><h4 id="statHealthAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Defense</h4><h4 id="statDefenseAmount"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Mana</h4><h4 id="statManaAmount"></h4>
+                    </div>
+                </div>
+                <div class="adv-stats">
+                    <div class="stat-block">
+                        <h4 class="stat-label">Total Vaults</h4><h4 id="statVTotal"></h4>
+                    </div>
+                    <hr>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Vaults Completed</h4><h4 id="statVComplete"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Vaults Abandoned</h4><h4 id="statVAbandon"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Vaults Failed</h4><h4 id="statVFailed"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="armory-img-box">
+                <h1 id="hunterName"></h1>
+                <img id="armory-img" src="">
+                <h2 id="vaultLevel"></h2>
+                <div id="progressBar"><div id="lvProgress"></div></div>
+            </div>
+            <div class="armory-sidebar-right">
+                <div class="basic-stats">
+                    <!--<h2>Vault Gear</h2>-->
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-charm">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Charm</h2>
+                        </div>
+                        <div class="gear-item box-left" id="gear-head">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Helmet</h2>
+                            <div class="gear-tooltip">
+                                <h2 id="tt-title"></h2><br>
+                                <div id="tt-info">
+                                    <p><span>Level: </span><span id="tt-lv"></span></p>
+                                    <p><span>Rarity: </span><span id="tt-rt"></span></p>
+                                    <p><span>Repairs: </span><span id="tt-rp"></span></p><br>    
+                                </div>
+                                <div id="tt-imp"><p>Implicits:</p><ul></ul><br></div>
+                                <div id="tt-pfx"><p>Prefixes:</p><ul></ul><br></div>
+                                <div id="tt-sfx"><p>Suffixes:</p><ul></ul></div>
+                            </div>
+                        </div>
+                        <div class="gear-item box-left" id="gear-offhand">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Shield</h2>
+                        </div>
+                    </div>
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-blue-trinket">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Blue Trinket</h2>
+                        </div>
+                        <div class="gear-item box-left" id="gear-chest">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Chestplate</h2>
+                        </div>
+                        <div class="gear-item box-left" id="gear-mainhand">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Sword</h2>
+                        </div>
+                    </div>
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-red-trinket">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Red Trinket</h2>
+                        </div>
+                        <div class="gear-item box-left" id="gear-legs">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Leggings</h2>
+                        </div>
+                        <div class="gear-blank"></div>
+                    </div>
+                    <div class="gear-row">
+                        <div class="gear-item box-left" id="gear-belt">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Magnet</h2>
+                        </div>
+                        <div class="gear-item box-left" id="gear-feet">
+                            <div class="gear-box">
+                                <div class="gear-icon">
+
+                                </div>
+                            </div>
+                            <h2 class="gear-label">Vault Boots</h2>
+                        </div>
+                        <div class="gear-blank"></div>
+                    </div>
+                </div>
+                <div class="adv-stats">
+                    <div class="stat-block">
+                        <h4 class="stat-label">Ability Power</h4><h4 id="statAP" class="gear-stat stat-r1"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Armor</h4><h4 id="statArmor" class="vanilla-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Arthropods Damage</h4><h4 id="statArpodDmg" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Attack Damage</h4><h4 id="statAtkDmg" class="vanilla-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Attack Range</h4><h4 id="statAtkRng" class="vanilla-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Attack Speed</h4><h4 id="statAtkSpd" class="vanilla-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Block Chance</h4><h4 id="statBlkPct" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Chaining Attack</h4><h4 id="statChain" class="gear-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Cooldown Reduction</h4><h4 id="statCoolReduc" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Copiously</h4><h4 id="statCopious" class="gear-stat stat-r1 stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Crit Hit Resistance</h4><h4 id="statCritResist" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Healing Efficiency</h4><h4 id="statHealEff" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Health</h4><h4 id="statHealth" class="vanilla-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Illager Damage</h4><h4 id="statIllDmg" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Increased Durability</h4><h4 id="statDurInc" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Item Quantity</h4><h4 id="statQuant" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Item Rarity</h4><h4 id="statRarity" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Knockback Resist</h4><h4 id="statKnockResist" class="vanilla-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Lucky Hit Chance</h4><h4 id="statLuckyPct" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Mana</h4><h4 id="statMana" class="vanilla-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Mana Regen</h4><h4 id="statManaRegen" class="vanilla-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Mining Speed</h4><h4 id="statMineSpd" class="gear-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Nether Damage</h4><h4 id="statNetherDmg" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Reach</h4><h4 id="statReach" class="vanilla-stat stat-r2"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Resistance</h4><h4 id="statResist" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Shocking Hit Chance</h4><h4 id="statShockPct" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Soul Chance</h4><h4 id="statSoulPct" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Stun Attack Chance</h4><h4 id="statStunPct" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Sweeping Hit Chance</h4><h4 id="statSweepPct" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Thorns Damage</h4><h4 id="statThornDmg" class="vanilla-stat"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Trap Disarm Chance</h4><h4 id="statDisarmPct" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Undead Damage</h4><h4 id="statUndeadDmg" class="gear-stat stat-pct"></h4>
+                    </div>
+                    <div class="stat-block">
+                        <h4 class="stat-label">Velara Affinity</h4><h4 id="statVelara" class="gear-stat stat-pct"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar">
+        <div class="scroll-header">
+            <h2>Active Hunters</h2>
+        </div>
+        <div class="scroll-content">
+            <a class="scroll-btn" onclick="moveScroll(-1)">&#10094;</a>
+            <div id="scroll-items"></div>
+            <a class="scroll-btn" onclick="moveScroll(1)">&#10095;</a>
+        </div>
+    </div>
+    <hr size="2" color="black" style="margin-bottom:2%;">
+    <div class="banner-img">
+        <img src="../img/sr-vault-banner.webp" width="100%">
+    </div>
+    <hr size="2" color="black" style="margin-top:2%;">
 </body>
+
+<script src="../js/armory.js"></script>
 </html>
