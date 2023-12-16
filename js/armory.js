@@ -242,6 +242,7 @@ async function setActive(n) {
 
 function loadPlayers() {
     let uuhttp = [];
+    let scrollPlayers = document.querySelectorAll(".nempty");
     /*let equip = ["CHEST", "FEET", "HEAD", "LEGS", "OFFHAND", "belt", "blue_trinket", "red_trinket"];*/
     for(i = 0; i < whitelist.members.length; i++) {
         uuhttp[i] = new XMLHttpRequest();
@@ -253,7 +254,9 @@ function loadPlayers() {
                     response.equipment[e].gearData = JSON.parse(response.equipment[e].gearData);
                 }
             });
-
+            const lv = document.createElement("p");
+            lv.innerHTML = "Level " + response.vaultLevel;
+            scrollPlayers[i - 1].appendChild(lv);
             playerData.players.push(response);
         }
         uuhttp[i].send();
@@ -280,7 +283,7 @@ jshttp.onload = function() {
 
             const imgChild = document.createElement("img");
             imgChild.src = avatars[a];
-            const txtChild = document.createElement("p");
+            const txtChild = document.createElement("h3");
             txtChild.innerHTML = whitelist.members[a].tag;
 
             elmnt.appendChild(imgChild);
@@ -296,7 +299,7 @@ jshttp.onload = function() {
 
             const imgChild = document.createElement("img");
             imgChild.src = avatars[a];
-            const txtChild = document.createElement("p");
+            const txtChild = document.createElement("h3");
             txtChild.innerHTML = whitelist.members[a].tag;
 
             elmnt.appendChild(imgChild);

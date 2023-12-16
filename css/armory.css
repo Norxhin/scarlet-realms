@@ -41,6 +41,9 @@
 .scroll-active {
     background-color: #CCCCCC;
 }
+.nempty h3 {
+    margin: 5px 0;
+}
 .nempty:hover {
     cursor: pointer;
     background-color: #CCCCCC;
