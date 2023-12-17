@@ -188,11 +188,14 @@
     display: flex;
     margin: auto 5%;
 }
-
 .install-text {
-    width: 50%;
+    width: 40%;
     font-size: 1.1em;
 }
 .install-text li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+.install-images {
+    width: 50%;
+    margin: 0 auto;
 }
