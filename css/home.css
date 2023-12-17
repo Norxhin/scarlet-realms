@@ -124,6 +124,7 @@ span {
 .dd-sources > a {
     color: #fdf1db;
     text-decoration: none;
+    cursor: default;
 }
 .dd-sources-content {
     display: none;

@@ -49,6 +49,17 @@ function showSlidesInst(n) {
     dots[instSlideIndex-1].className += " active-slide";
 }
 
+function showTab(n) {
+    let tabs = document.querySelectorAll(".modlist-sec");
+    let btns = document.querySelectorAll(".selector-btn");
+    for(let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+        btns[i].classList.remove("active-sec");
+    }
+    tabs[n].style.display = "block";
+    btns[n].classList.add("active-sec");
+}
+
 var acc = document.getElementsByClassName("accordion-btn");
 for(i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
@@ -62,3 +73,4 @@ for(i = 0; i < acc.length; i++) {
         }
     })
 }
+showTab(0);
