@@ -191,16 +191,30 @@ async function setActive(n) {
                     gLabel.style.color = textRarity[r];
                     break;
                 case "OFFHAND":
-                    gIcon.style.backgroundImage = "url(" + spritePrefix + "gear/placeholders/shield.png)";
-                    gLabel.innerHTML = "Vault Shield";
-                    gLabel.style.color = textRarity[r];
-                    gBox.style.borderColor = borderRarity[r];
+                    if(pDat.equipment[e].itemKey.startsWith("the_vault")) {
+                        gIcon.style.backgroundImage = "url(" + spritePrefix + "gear/placeholders/shield.png)";
+                        gLabel.innerHTML = "Vault Shield";
+                        gLabel.style.color = textRarity[r];
+                        gBox.style.borderColor = borderRarity[r];
+                    } else {
+                        gIcon.style.backgroundImage = "url(https://api.vaulthunters.gg/static/sprites/items/non_vault_item.png)";
+                        gLabel.innerHTML = pDat.equipment[e].itemKey.replace(/^.*:/, "").replace("_", " ").split(" ").map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(" ");
+                        gLabel.style.color = textRarity["SCRAPPY"];
+                        gBox.style.borderColor = borderRarity["SCRAPPY"];
+                    }
                     break;
                 case "MAINHAND":
-                    gIcon.style.backgroundImage = "url(" + spritePrefix + "gear/placeholders/sword.png)";
-                    gLabel.innerHTML = "Vault Sword";
-                    gLabel.style.color = textRarity[r];
-                    gBox.style.borderColor = borderRarity[r];
+                    if(pDat.equipment[e].itemKey.startsWith("the_vault")) {
+                        gIcon.style.backgroundImage = "url(" + spritePrefix + "gear/placeholders/sword.png)";
+                        gLabel.innerHTML = "Vault Sword";
+                        gLabel.style.color = textRarity[r];
+                        gBox.style.borderColor = borderRarity[r];
+                    } else {
+                        gIcon.style.backgroundImage = "url(https://api.vaulthunters.gg/static/sprites/items/non_vault_item.png)";
+                        gLabel.innerHTML = pDat.equipment[e].itemKey.replace(/^.*:/, "").replace("_", " ").split(" ").map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(" ");
+                        gLabel.style.color = textRarity["SCRAPPY"];
+                        gBox.style.borderColor = borderRarity["SCRAPPY"];
+                    }
                     break;
                 /*case "HEAD":
                     imgURL = spritePrefix + pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "") + "_overlay.png"
@@ -217,18 +231,25 @@ async function setActive(n) {
                     gBox.style.borderColor = borderRarity[r];
                     break;*/
                 default:
-                    imgURL = spritePrefix + pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "") + "_overlay.png"
-                    request = new Request(imgURL);
-                    await fetch(request).then((response) => {
-                        if(response.ok) {
-                            gIcon.style.backgroundImage = "url(" + imgURL + ")";
-                        } else {
-                            gIcon.style.backgroundImage = "url(" + imgURL.replace("_overlay", "") + ")";
-                        }
-                    });
-                    gLabel.innerHTML = equipLabel[e];
-                    gLabel.style.color = textRarity[r];
-                    gBox.style.borderColor = borderRarity[r];
+                    if(pDat.equipment[e].itemKey.startsWith("the_vault")) {
+                        imgURL = spritePrefix + pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "") + "_overlay.png"
+                        request = new Request(imgURL);
+                        await fetch(request).then((response) => {
+                            if(response.ok) {
+                                gIcon.style.backgroundImage = "url(" + imgURL + ")";
+                            } else {
+                                gIcon.style.backgroundImage = "url(" + imgURL.replace("_overlay", "") + ")";
+                            }
+                        });
+                        gLabel.innerHTML = equipLabel[e];
+                        gLabel.style.color = textRarity[r];
+                        gBox.style.borderColor = borderRarity[r];
+                    } else {
+                        gIcon.style.backgroundImage = "url(https://api.vaulthunters.gg/static/sprites/items/non_vault_item.png)";
+                        gLabel.innerHTML = pDat.equipment[e].itemKey.replace(/^.*:/, "").replace("_", " ").split(" ").map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(" ");
+                        gLabel.style.color = textRarity["SCRAPPY"];
+                        gBox.style.borderColor = borderRarity["SCRAPPY"];
+                    }
                     break;
             }
         } else {
