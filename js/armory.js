@@ -67,9 +67,10 @@ let scrollIndex = 1;
 let activePlayer = 1;
 
 function defCalc(a, b, r) {
+    const r_adj = r - 0.5;
     const af = Math.pow(40 / a, 2);
     const d1 = 1 - (1 / (af + 1));
-    const d2 = d1 * (1 - r);
+    const d2 = d1 * (1 - r_adj);
     const d3 = d2 * (1 - b);
     return (1 - d3);
 }
