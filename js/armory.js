@@ -277,6 +277,10 @@ async function setActive(n) {
     }
 
     /* Abilities */
+    document.querySelectorAll(".ability-box").forEach((e) => {
+        if(!e.classList.contains("grey-box")) { e.classList.add("grey-box") }
+    });
+
     const playerAb = pDat.abilities;
     const pak = Object.keys(playerAb);
     for(i = 0; i < pak.length; i++) {
@@ -288,6 +292,7 @@ async function setActive(n) {
 
 function loadPlayers() {
     let uuhttp = [];
+    let levels = [];
     let scrollPlayers = document.querySelectorAll(".nempty");
     /*let equip = ["CHEST", "FEET", "HEAD", "LEGS", "OFFHAND", "belt", "blue_trinket", "red_trinket"];*/
     for(i = 0; i < whitelist.members.length; i++) {
@@ -300,13 +305,18 @@ function loadPlayers() {
                     response.equipment[e].gearData = JSON.parse(response.equipment[e].gearData);
                 }
             });
-            const lv = document.createElement("p");
-            lv.innerHTML = "Level " + response.vaultLevel;
-            scrollPlayers[i - 1].appendChild(lv);
+            levels.push("Level " + response.vaultLevel);            
             playerData.players.push(response);
         }
         uuhttp[i].send();
     }
+    setTimeout(() => {
+        for(i = 0; i < levels.length; i++) {
+            const lv = document.createElement("p");
+            lv.innerHTML = levels[i];
+            scrollPlayers[i].appendChild(lv);
+        }
+    }, 50);
     setTimeout(setActive, 200, n = scrollIndex);
 }
 
