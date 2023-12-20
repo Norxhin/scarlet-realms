@@ -1,10 +1,10 @@
 {
   "playerUUID": "6bc0c04f-e1ff-4840-8e82-0fc57e76e46c",
   "playerNickname": "Death2725",
-  "timestamp": 1703053180,
+  "timestamp": 1703053466,
   "completed": 0,
   "survived": 0,
-  "failed": 2,
+  "failed": 3,
   "vaultLevel": 0,
   "levelPercent": 0.0,
   "vanillaAttributes": {
@@ -76,26 +76,26 @@
     "FEET": {
       "itemKey": "minecraft:iron_boots",
       "count": 1,
-      "nbt": "{Damage:16}",
-      "gearData": "{\"id\":\"646c5514-9b10-4f93-847f-437a29de74ae\",\"attributes\":[]}"
+      "nbt": "{Damage:31}",
+      "gearData": "{\"id\":\"3b01e514-d533-4455-b222-3eb9ef686441\",\"attributes\":[]}"
     },
     "LEGS": {
       "itemKey": "minecraft:iron_leggings",
       "count": 1,
-      "nbt": "{Damage:16}",
-      "gearData": "{\"id\":\"79ea265e-0909-4ec7-bcca-9ebe10e57913\",\"attributes\":[]}"
+      "nbt": "{Damage:31}",
+      "gearData": "{\"id\":\"e64460e7-5b54-45d2-81bc-259e626990d8\",\"attributes\":[]}"
     },
     "CHEST": {
       "itemKey": "minecraft:iron_chestplate",
       "count": 1,
-      "nbt": "{Damage:16}",
-      "gearData": "{\"id\":\"6725cab8-6142-4beb-b164-b993fe99c512\",\"attributes\":[]}"
+      "nbt": "{Damage:31}",
+      "gearData": "{\"id\":\"874f7ce9-4217-4404-a6a8-ac8adf8dfbb3\",\"attributes\":[]}"
     },
     "HEAD": {
       "itemKey": "minecraft:iron_helmet",
       "count": 1,
-      "nbt": "{Damage:16}",
-      "gearData": "{\"id\":\"1363561a-859c-4f10-8226-475759e09308\",\"attributes\":[]}"
+      "nbt": "{Damage:31}",
+      "gearData": "{\"id\":\"a427cfc8-bc41-4678-8fcd-2784b2a9fa91\",\"attributes\":[]}"
     }
   },
   "abilities": {},
