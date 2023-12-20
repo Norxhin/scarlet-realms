@@ -171,6 +171,8 @@ async function setActive(n) {
         const gLabel = gears[i].getElementsByClassName("gear-label")[0];
         const gBox = gears[i].getElementsByClassName("gear-box")[0];
         if(pDat.equipment[e] !== undefined) {
+            const attr = pDat.equipment[e].gearData.attributes;
+            let path = null;
             const r = pDat.equipment[e].gearData.rarity;
             switch(e) {
                 case "charm":
@@ -178,17 +180,26 @@ async function setActive(n) {
                     gLabel.innerHTML = "Charm";
                     break;
                 case "blue_trinket":
-                    gIcon.style.backgroundImage = "url(" + spritePrefix + "trinkets/" + pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "") + ".png)";
-                    gLabel.innerHTML = pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "").replace("_", " ").split(" ").map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(" ");
+                    attr.forEach((e) => {
+                        if(e.name == "the_vault:gear_model") { path = e.value }
+                    });
+                    gIcon.style.backgroundImage = "url(" + spritePrefix + "trinkets/" + path.replace("the_vault:", "") + ".png)";
+                    gLabel.innerHTML = path.replace("the_vault:", "").replace("_", " ").split(" ").map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(" ");
                     gLabel.style.color = "rgb(50, 107, 252)";
                     break;
                 case "red_trinket":
-                    gIcon.style.backgroundImage = "url(" + spritePrefix + "trinkets/" + pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "") + ".png)";
-                    gLabel.innerHTML = pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "").replace("_", " ").split(" ").map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(" ");
+                    attr.forEach((e) => {
+                        if(e.name == "the_vault:gear_model") { path = e.value }
+                    });
+                    gIcon.style.backgroundImage = "url(" + spritePrefix + "trinkets/" + path.replace("the_vault:", "") + ".png)";
+                    gLabel.innerHTML = path.value.replace("the_vault:", "").replace("_", " ").split(" ").map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(" ");
                     gLabel.style.color = "rgb(252, 74, 50)";
                     break;
                 case "belt":
-                    gIcon.style.backgroundImage = "url(" + spritePrefix + pDat.equipment.belt.gearData.attributes[1].value.replace("the_vault:", "") + ".png)";
+                    attr.forEach((e) => {
+                        if(e.name == "the_vault:gear_model") { path = e.value }
+                    });
+                    gIcon.style.backgroundImage = "url(" + spritePrefix + path.replace("the_vault:", "") + ".png)";
                     gLabel.innerHTML = "Vault Magnet";
                     gLabel.style.color = textRarity[r];
                     break;
@@ -234,7 +245,10 @@ async function setActive(n) {
                     break;*/
                 default:
                     if(pDat.equipment[e].itemKey.startsWith("the_vault")) {
-                        imgURL = spritePrefix + pDat.equipment[e].gearData.attributes[1].value.replace("the_vault:", "") + "_overlay.png"
+                        attr.forEach((e) => {
+                            if(e.name == "the_vault:gear_model") { path = e.value }
+                        });
+                        imgURL = spritePrefix + path.replace("the_vault:", "") + "_overlay.png"
                         request = new Request(imgURL);
                         await fetch(request).then((response) => {
                             if(response.ok) {
@@ -373,6 +387,9 @@ function fillTooltip(toolId, tt) {
         if(tt.querySelector("#tt-imp") !== null) { tt.querySelector("#tt-imp").remove() }
         if(tt.querySelector("#tt-pfx") !== null) { tt.querySelector("#tt-pfx").remove() }
         if(tt.querySelector("#tt-sfx") !== null) { tt.querySelector("#tt-sfx").remove() }
+        const attr = g.gearData.attributes;
+        let path = null;
+        attr.forEach((e) => { if(e.name == "the_vault:gear_model") { path = e.value }});
         
         /* Title */
         const title = tt.querySelector("#tt-title");
@@ -393,12 +410,12 @@ function fillTooltip(toolId, tt) {
         /* Description */
         if(tt.querySelector("#tt-des") !== null) {
             const des = tt.querySelector("#tt-des");
-            des.querySelector("p").innerHTML = trinkets.trinkets[g.gearData.attributes[1].value.replace("the_vault:", "")].text;
+            des.querySelector("p").innerHTML = trinkets.trinkets[path.replace("the_vault:", "")].text;
         } else {
             const des = document.createElement("div");
             des.id = "tt-des";
             const txt = document.createElement("p");
-            txt.innerHTML = trinkets.trinkets[g.gearData.attributes[1].value.replace("the_vault:", "")].text;
+            txt.innerHTML = trinkets.trinkets[path.replace("the_vault:", "")].text;
             des.appendChild(txt);
             tt.appendChild(des);
         }
