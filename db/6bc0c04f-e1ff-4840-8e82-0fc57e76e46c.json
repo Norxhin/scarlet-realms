@@ -1,0 +1,112 @@
+{
+  "playerUUID": "6bc0c04f-e1ff-4840-8e82-0fc57e76e46c",
+  "playerNickname": "Death2725",
+  "timestamp": 1703049531,
+  "completed": 0,
+  "survived": 0,
+  "failed": 0,
+  "vaultLevel": 0,
+  "levelPercent": 0.0,
+  "vanillaAttributes": {
+    "minecraft:generic.max_health": 20.0,
+    "minecraft:generic.knockback_resistance": 0.0,
+    "minecraft:generic.movement_speed": 0.10000000149011612,
+    "minecraft:generic.attack_damage": 5.0,
+    "minecraft:generic.attack_knockback": 0.0,
+    "minecraft:generic.attack_speed": 1.2000000476837158,
+    "minecraft:generic.armor": 8.0,
+    "minecraft:generic.armor_toughness": 0.0,
+    "minecraft:generic.luck": 0.0,
+    "botania:pixie_spawn_chance": 0.0,
+    "forge:swim_speed": 1.0,
+    "forge:nametag_distance": 64.0,
+    "forge:entity_gravity": 0.08,
+    "forge:reach_distance": 4.5,
+    "forge:attack_range": 3.0,
+    "forge:step_height_addition": 0.0,
+    "the_vault:generic.crit_chance": 0.0,
+    "the_vault:generic.crit_multiplier": 0.0,
+    "the_vault:generic.tp_chance": 0.0,
+    "the_vault:generic.indirect_tp_chance": 0.0,
+    "the_vault:generic.tp_range": 32.0,
+    "the_vault:generic.potion_resistance": 0.0,
+    "the_vault:generic.size_scale": 1.0,
+    "the_vault:generic.break_armor_chance": 0.0,
+    "the_vault:generic.mana_max": 100.0,
+    "the_vault:generic.mana_regen": 1.0,
+    "the_vault:generic.reach": 0.0,
+    "the_vault:generic.crossbow_charge_time": 0.0,
+    "the_vault:generic.thorns_chance": 0.0,
+    "the_vault:generic.thorns_damage": 0.0
+  },
+  "gearAttributes": {
+    "the_vault:ability_power": 0.0,
+    "the_vault:healing_effectiveness": 0.0,
+    "the_vault:cooldown_reduction": 0.0,
+    "the_vault:resistance": 0.5,
+    "the_vault:block": 0.0,
+    "the_vault:critical_hit_mitigation": 0.0,
+    "the_vault:durability_wear_reduction": 0.0,
+    "the_vault:thorns_damage_flat": 0.0,
+    "the_vault:on_hit_chain": 0,
+    "the_vault:on_hit_stun": 0.0,
+    "the_vault:shocking_hit_chance": 0.0,
+    "the_vault:sweeping_hit_chance": 0.0,
+    "the_vault:item_quantity": 0.0,
+    "the_vault:item_rarity": 0.0,
+    "the_vault:trap_disarming": 0.0,
+    "the_vault:copiously": 0.0,
+    "the_vault:mining_speed": 0.0,
+    "the_vault:soul_chance": 0.0,
+    "the_vault:lucky_hit_chance": 0.0,
+    "the_vault:damage_increase": 0.0,
+    "the_vault:damage_illagers": 0.0,
+    "the_vault:damage_spiders": 0.0,
+    "the_vault:damage_undead": 0.0,
+    "the_vault:damage_nether": 0.0,
+    "the_vault:velara_affinity": 0.0
+  },
+  "reputation": {
+    "Velara": 0,
+    "Tenos": 0,
+    "Wendarr": 0,
+    "Idona": 0
+  },
+  "equipment": {
+    "MAINHAND": {
+      "itemKey": "minecraft:diamond_pickaxe",
+      "count": 1,
+      "nbt": "{Damage:1158}",
+      "gearData": "{\"id\":\"8f95cf03-a247-41b3-9224-6c2b81788e32\",\"attributes\":[]}"
+    },
+    "FEET": {
+      "itemKey": "minecraft:iron_boots",
+      "count": 1,
+      "nbt": "{Damage:3}",
+      "gearData": "{\"id\":\"68f573db-0884-4aee-a46d-186060413b86\",\"attributes\":[]}"
+    },
+    "LEGS": {
+      "itemKey": "minecraft:iron_leggings",
+      "count": 1,
+      "nbt": "{Damage:3}",
+      "gearData": "{\"id\":\"8f867666-2b8b-4fac-b40f-f7af36fe175b\",\"attributes\":[]}"
+    },
+    "CHEST": {
+      "itemKey": "minecraft:iron_chestplate",
+      "count": 1,
+      "nbt": "{Damage:3}",
+      "gearData": "{\"id\":\"c509f02b-4cf7-4811-a631-55e0232cc2ec\",\"attributes\":[]}"
+    },
+    "HEAD": {
+      "itemKey": "minecraft:iron_helmet",
+      "count": 1,
+      "nbt": "{Damage:3}",
+      "gearData": "{\"id\":\"0ab2c93c-a2e5-448c-b7b6-5ae9fc90198f\",\"attributes\":[]}"
+    }
+  },
+  "abilities": {},
+  "talents": {},
+  "expertises": {},
+  "researches": [],
+  "skillTemplates": []
+}
