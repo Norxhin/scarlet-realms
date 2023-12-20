@@ -1,20 +1,20 @@
 {
   "playerUUID": "0655fba9-a251-4e31-801b-699ff8860a43",
   "playerNickname": "SonoTensai",
-  "timestamp": 1703045944,
-  "completed": 0,
+  "timestamp": 1703048974,
+  "completed": 1,
   "survived": 0,
   "failed": 0,
-  "vaultLevel": 0,
-  "levelPercent": 0.0,
+  "vaultLevel": 4,
+  "levelPercent": 0.232,
   "vanillaAttributes": {
     "minecraft:generic.max_health": 20.0,
-    "minecraft:generic.knockback_resistance": 0.0,
+    "minecraft:generic.knockback_resistance": 0.06000000238418579,
     "minecraft:generic.movement_speed": 0.10000000149011612,
-    "minecraft:generic.attack_damage": 7.0,
+    "minecraft:generic.attack_damage": 16.5,
     "minecraft:generic.attack_knockback": 0.0,
-    "minecraft:generic.attack_speed": 1.5999999046325684,
-    "minecraft:generic.armor": 9.0,
+    "minecraft:generic.attack_speed": 1.6099999999999999,
+    "minecraft:generic.armor": 12.0,
     "minecraft:generic.armor_toughness": 0.0,
     "minecraft:generic.luck": 0.0,
     "botania:pixie_spawn_chance": 0.0,
@@ -33,14 +33,14 @@
     "the_vault:generic.size_scale": 1.0,
     "the_vault:generic.break_armor_chance": 0.0,
     "the_vault:generic.mana_max": 100.0,
-    "the_vault:generic.mana_regen": 1.0,
+    "the_vault:generic.mana_regen": 1.1800000071525574,
     "the_vault:generic.reach": 0.0,
     "the_vault:generic.crossbow_charge_time": 0.0,
     "the_vault:generic.thorns_chance": 0.0,
     "the_vault:generic.thorns_damage": 0.0
   },
   "gearAttributes": {
-    "the_vault:ability_power": 0.0,
+    "the_vault:ability_power": 5.5,
     "the_vault:healing_effectiveness": 0.0,
     "the_vault:cooldown_reduction": 0.0,
     "the_vault:resistance": 0.5,
@@ -74,42 +74,42 @@
   },
   "equipment": {
     "MAINHAND": {
-      "itemKey": "minecraft:diamond_sword",
+      "itemKey": "the_vault:sword",
       "count": 1,
-      "nbt": "{Damage:182,Enchantments:[{id:\"minecraft:looting\",lvl:3s},{id:\"minecraft:mending\",lvl:1s}]}",
-      "gearData": "{\"id\":\"79a8c29c-43a6-42d1-8ec7-b2d5b54106fa\",\"attributes\":[]}"
-    },
-    "OFFHAND": {
-      "itemKey": "minecraft:torch",
-      "count": 50,
-      "gearData": "{\"id\":\"a2db4c42-a11c-452c-ac6d-d59de9c6aed9\",\"attributes\":[]}"
+      "nbt": "{clientCache:{color:[B;],colors:[I;11184810],gearName:[B;],jcolors:[I;13116966,15007916],model:\"the_vault:gear/sword/sword_0\",rarity:0,rollType:\"Scrappy+\",state:2},vaultGearData:[L;3265762778913442939L,-398590740671527374L,1514722424829610075L,3527585455153845571L,2753168875257675788L,2398521632831768087L,1245127937339252741L,2398662703078129736L,1245127937339252741L,-2932264392031147960L,6918973003275440419L,6059615854004475141L,2685136385580473570L,2398483460923728641L,6093534411180302341L,5575674136L,6066718503347557522L,5846518083245369L,2927339757795016704L,4611686018427387904L,4833775685013162312L,6063184587157488789L,23926L,3896784520120107008L,-4137077326807284137L,-4608798068599994730L,11928074082200074L,228014939510575778L,-5476377146882523136L,-3845640312894353244L,2929633344977281664L,112409846699167624L,96L,4188544164056614784L,3653184737032384698L,3553434665372392370L,1518843378064959828L,71765702216460L,5930677759293521920L,-800144550653329080L,18753252265044L,2905279156491124736L,-1419321429938360724L,-9217596138317820243L,23856148164400149L,1188931809924051L,2729181374186520576L,456284492525474949L,8092128778564408596L,2522015791327477780L,64L,8377088328113229824L,7020374340627816820L,-6869114626580585113L,2884558473458264162L,2945523517599651882L,0L,7106869330744782595L,2450055369458725544L,10715752L,33603584L,8873070296735678464L,3135572569748030322L,4833775685013162427L,-4394029990828323435L,5618140254210L,2711272528793305088L,1609205997132321925L,4994263494830084486L,-5069450428989501920L,123293L,7378699391915780354L,-9029714432618657302L,2352594557189398922L,280L,0L,-3273874354565375200L,-2390592460170951960L,-4233005412219981092L,874965790023181648L,19508841775839379L,144115188075855872L]}",
+      "gearData": "{\"id\":\"22d5251f-1d5d-40c7-bfa7-7ebd54b83863\",\"attributes\":[{\"name\":\"the_vault:gear_roll_type\",\"value\":\"Scrappy+\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:gear_model\",\"value\":\"the_vault:gear/sword/sword_0\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:crafting_potential\",\"value\":34,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:prefixes\",\"value\":1,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:suffixes\",\"value\":1,\"display\":{\"color\":0,\"elements\":[]}}],\"level\":4,\"rarity\":\"SCRAPPY\",\"state\":\"IDENTIFIED\",\"maxRepairs\":2,\"usedRepairs\":0,\"implicits\":[{\"name\":\"the_vault:durability\",\"value\":1495,\"display\":{\"color\":14668030,\"elements\":[\"\",\"1495\",\" Durability\"]},\"legendary\":false,\"category\":\"NONE\"},{\"name\":\"the_vault:attack_speed\",\"value\":-2.39,\"display\":{\"color\":16767592,\"elements\":[\"\",\"1.61\",\" Attack Speed\"]},\"legendary\":false,\"category\":\"NONE\"},{\"name\":\"the_vault:soulbound\",\"value\":true,\"display\":{\"color\":9856253,\"elements\":[\"\",\"Soulbound\"]},\"legendary\":false,\"category\":\"NONE\"},{\"name\":\"the_vault:attack_damage\",\"value\":9.5,\"display\":{\"color\":13116966,\"elements\":[\"\",\"9.5\",\" Attack Damage\"]},\"legendary\":false,\"category\":\"NONE\"}],\"prefixes\":[{\"name\":\"the_vault:attack_damage\",\"value\":6.0,\"display\":{\"color\":13116966,\"elements\":[\"+\",\"6\",\" Attack Damage\"]},\"legendary\":false,\"category\":\"NONE\"}],\"suffixes\":[{\"name\":\"the_vault:effect_cloud\",\"value\":{\"effectCloud\":{\"tooltip\":\"Chilling\",\"additionalEffects\":[{\"effect\":\"the_vault:chilled\",\"duration\":140,\"amplifier\":0}],\"duration\":120,\"radius\":4.0,\"color\":3138042,\"affectsOwner\":false,\"triggerChance\":0.05}},\"display\":{\"color\":15007916,\"elements\":[\"+\",\"Chilling Cloud\"]},\"legendary\":false,\"category\":\"NONE\"}]}"
     },
     "FEET": {
-      "itemKey": "minecraft:iron_boots",
+      "itemKey": "minecraft:diamond_boots",
       "count": 1,
-      "nbt": "{Damage:75}",
-      "gearData": "{\"id\":\"909bca4d-b502-49c0-b076-c73fd1f8594d\",\"attributes\":[]}"
+      "nbt": "{Damage:0}",
+      "gearData": "{\"id\":\"c5a21af3-2099-4296-b188-a8cc52a4cbfa\",\"attributes\":[]}"
     },
     "LEGS": {
-      "itemKey": "minecraft:iron_leggings",
+      "itemKey": "minecraft:diamond_leggings",
       "count": 1,
-      "nbt": "{Damage:36}",
-      "gearData": "{\"id\":\"861ecc25-20ec-419b-a92e-928dda1e3bbb\",\"attributes\":[]}"
+      "nbt": "{Damage:0}",
+      "gearData": "{\"id\":\"dee6472d-4d18-4012-aeba-828ac2cbdaaf\",\"attributes\":[]}"
     },
     "CHEST": {
-      "itemKey": "minecraft:diamond_chestplate",
+      "itemKey": "the_vault:chestplate",
       "count": 1,
-      "nbt": "{Damage:36}",
-      "gearData": "{\"id\":\"f77e6e50-b8b0-410d-aaa9-eb3c3f0e3371\",\"attributes\":[]}"
+      "nbt": "{clientCache:{color:[B;],colors:[I;11184810],gearName:[B;],jcolors:[I;16756751,65535],model:\"the_vault:gear/armor/rusty_raider/chestplate\",rarity:0,rollType:\"Scrappy+\",state:2},vaultGearData:[L;-6911731042947423525L,-5800615180836097836L,1514722424829581433L,-1350007658135317181L,-3845640312894353244L,-6915813264439637853L,-3516077761619777486L,-2244236519103216950L,-4125617359045473576L,-2531345427552746780L,7106869330744783070L,-8782423854960545112L,-1961696899806484479L,-6617713823537110846L,155640992167406592L,-6617661005384226807L,155640992167406592L,-7302216733234557687L,8368858557152496808L,4047188607659248192L,8261961958631187497L,2197760587956683408L,75179722567850L,7106869330744779776L,2993417258586477224L,-4608798072753881088L,1310770310886599178L,170156L,185860096L,46207152351608832L,4658033262451663020L,4564652955720L,0L,-1951597083475409636L,7418247528511096002L,-6534506174874564526L,2603171106424966160L,6636108L,6197043335522156544L,1523286808527647056L,0L,-7652313912896913408L,-6507237978651116235L,-9029714432616962607L,-8061431684483341942L,149402L,-9029714432615514112L,-3853787945030213238L,1585267107669075968L,8L,-3609550789314850400L,2624910210800447149L,744514868677186693L,17196668097L,2398703466328358912L,-897459585382260731L,5986726511478082316L,8485503064357294386L,61L,8029438080384341504L,7301016020500769635L,7305804385369680243L,-6313307067014436539L,1252456381165369778L,3037196786226782594L,165488L,-4608798071408558080L,2745047456295434L,560427938005792937L,-9223372036854775808L,5489268000195209649L,1478630030810344618L,76339457595544960L,1014560413067739444L,2305843009213693952L]}",
+      "gearData": "{\"id\":\"4a014993-c821-422d-9af8-01339db86b0d\",\"attributes\":[{\"name\":\"the_vault:is_loot\",\"value\":true,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:gear_roll_type_pool\",\"value\":\"gear_completion_crate_mono\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:gear_roll_type\",\"value\":\"Scrappy+\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:gear_model\",\"value\":\"the_vault:gear/armor/rusty_raider/chestplate\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:crafting_potential\",\"value\":34,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:prefixes\",\"value\":1,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:suffixes\",\"value\":1,\"display\":{\"color\":0,\"elements\":[]}}],\"level\":0,\"rarity\":\"SCRAPPY\",\"state\":\"IDENTIFIED\",\"maxRepairs\":5,\"usedRepairs\":0,\"implicits\":[{\"name\":\"the_vault:durability\",\"value\":531,\"display\":{\"color\":14668030,\"elements\":[\"\",\"531\",\" Durability\"]},\"legendary\":false,\"category\":\"NONE\"},{\"name\":\"the_vault:armor\",\"value\":5,\"display\":{\"color\":4766456,\"elements\":[\"\",\"5\",\" Armor\"]},\"legendary\":false,\"category\":\"NONE\"},{\"name\":\"the_vault:ability_power\",\"value\":5.5,\"display\":{\"color\":16711883,\"elements\":[\"\",\"5.5\",\" Ability Power\"]},\"legendary\":false,\"category\":\"NONE\"}],\"prefixes\":[{\"name\":\"the_vault:knockback_resistance\",\"value\":0.060000002,\"display\":{\"color\":16756751,\"elements\":[\"+\",\"6%\",\" Knockback Resist\"]},\"legendary\":false,\"category\":\"NONE\"}],\"suffixes\":[{\"name\":\"the_vault:mana_regen\",\"value\":0.18,\"display\":{\"color\":65535,\"elements\":[\"+\",\"18%\",\" Mana Regen\"]},\"legendary\":false,\"category\":\"NONE\"}]}"
     },
     "HEAD": {
-      "itemKey": "minecraft:iron_helmet",
+      "itemKey": "minecraft:diamond_helmet",
       "count": 1,
-      "nbt": "{Damage:36}",
-      "gearData": "{\"id\":\"efd7ac00-1710-4865-b1f0-726295866c6e\",\"attributes\":[]}"
+      "nbt": "{Damage:0}",
+      "gearData": "{\"id\":\"3b7c4515-cd27-4004-9a91-7fde27cbb6d0\",\"attributes\":[]}"
     }
   },
-  "abilities": {},
+  "abilities": {
+    "Heal_Base": 1,
+    "Dash_Base": 1,
+    "Vein_Miner_Base": 1,
+    "Stonefall_Base": 1
+  },
   "talents": {},
   "expertises": {},
   "researches": [],
