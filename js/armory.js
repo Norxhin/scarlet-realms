@@ -1,5 +1,6 @@
 const jshttp = new XMLHttpRequest();
 const trhttp = new XMLHttpRequest();
+const abhttp = new XMLHttpRequest();
 const avatarPrefix = "https://crafthead.net/avatar/";
 const skinPrefix = "https://crafthead.net/armor/body/";
 const spritePrefix = "https://api.vaulthunters.gg/static/sprites/"
@@ -61,7 +62,7 @@ const advStatInfo = {
 };
 const equip = ["charm", "HEAD", "OFFHAND", "blue_trinket", "CHEST", "MAINHAND", "red_trinket", "LEGS", "belt", "FEET"];
 const gears = document.getElementsByClassName("gear-item");
-let whitelist, trinkets, p, avatars;
+let whitelist, trinkets, p, avatars, abilities, abKeys;
 let playerData = {"players": []};
 let scrollIndex = 1;
 let activePlayer = 1;
@@ -259,6 +260,15 @@ async function setActive(n) {
             gLabel.style.color = "#fdf1db";
             gears[i].classList.add("gear-empty");
         }
+    }
+
+    /* Abilities */
+    const playerAb = pDat.abilities;
+    const pak = Object.keys(playerAb);
+    for(i = 0; i < pak.length; i++) {
+        const k = pak[i];
+        const s = k.toLowerCase().replace("_", "-");
+        document.querySelector("#ab-" + s + " .ability-box").classList.remove("grey-box");
     }
 }
 
@@ -661,6 +671,7 @@ function statSwap(id) {
         case 0:
             document.querySelectorAll(".basic-stats").forEach((e) => { e.style.display = "block" });
             document.querySelectorAll(".adv-stats").forEach((e) => { e.style.display = "none" });
+            document.querySelectorAll(".abilities").forEach((e) => { e.style.display = "none" });
 
             document.querySelector("#armory-header-stats").innerHTML = "Statistics";
             document.querySelector("#armory-header-gear").innerHTML = "Vault Gear";
@@ -670,11 +681,136 @@ function statSwap(id) {
 
             document.querySelectorAll(".basic-stats").forEach((e) => { e.style.display = "none" });
             document.querySelectorAll(".adv-stats").forEach((e) => { e.style.display = "block" });
+            document.querySelectorAll(".abilities").forEach((e) => { e.style.display = "none" });
 
             document.querySelector("#armory-header-stats").innerHTML = "Vault Statistics";
             document.querySelector("#armory-header-gear").innerHTML = "Detailed Statistics";
             break;
+        case 2:
+            document.querySelectorAll(".basic-stats").forEach((e) => { e.style.display = "none" });
+            document.querySelectorAll(".adv-stats").forEach((e) => { e.style.display = "none" });
+            document.querySelectorAll(".abilities").forEach((e) => { e.style.display = "block" });
+
+            document.querySelector("#armory-header-stats").innerHTML = "Offensive/Buff Abilities";
+            document.querySelector("#armory-header-gear").innerHTML = "Defensive/Movement/Other Abilities";
     }
+}
+
+function popModal(evt) {
+    const id = evt.currentTarget.abId;
+    const modal = document.querySelector("#armory-modal");
+    const i = abKeys.indexOf(id);
+    let nI;
+    let maxLvs = [], lvs = [];
+
+    /* Remove stuff */
+    modal.querySelectorAll(".ability-block").forEach((e) => { e.remove() });
+    
+    /* Name */
+    modal.querySelector("h1").innerHTML = abilities[id].name;
+
+    modal.style.display = "block";
+    setTimeout(() => { modal.style.backgroundColor = "rgba(0, 0, 0, 0.6" }, 50);
+    /*modal.style.backgroundColor = "rgba(0, 0, 0, 0.6)";*/
+
+    if(abKeys[i+1] === undefined) {
+        nI = i+1;
+    } else {
+        for(let k = i+1; k < abKeys.length; k++) {
+            if(abKeys[k].includes("Base")) { 
+                nI = k;
+                break;
+            }
+        }
+    }
+    
+
+    for(let k = i; k < nI; k++) {
+        a = abilities[abKeys[k]];
+        const pLev = playerData.players[activePlayer - 1].abilities[abKeys[k]];
+        maxLvs.push(a.maxLevels);
+        lvs.push(pLev);
+
+        const abilityBlock = document.createElement("div");
+        abilityBlock.classList.add("ability-block");
+        abilityBlock.ab = abKeys[k];
+
+        const box = document.createElement("div");
+        box.classList.add("modal-box");
+
+        const icon = document.createElement("div");
+        icon.classList.add("modal-icon");
+        if(pLev === undefined) { icon.classList.add("grey-box") }
+        icon.style.backgroundImage = "url(" + spritePrefix + "abilities/" + a.id + ".png)"
+
+        const barContainer = document.createElement("div");
+        barContainer.style.position = "relative";
+
+        const lvBar = document.createElement("div");
+        lvBar.style.height = "20px";
+        lvBar.style.width = "80%";
+        lvBar.style.backgroundColor = "rgba(34, 34, 34, 0)";
+        lvBar.style.border = "5px solid #555555";
+        lvBar.style.display = "flex";
+        lvBar.style.position = "absolute";
+
+        for(let l = 0; l < a.maxLevels; l++) {
+            const lvSeg = document.createElement("div");
+            lvSeg.style.width = (100 / a.maxLevels) + "%";
+            lvSeg.style.border = "2px solid white";
+            lvSeg.style.textAlign = "center";
+
+            /*lvSeg.innerHTML = l + 1;*/
+
+            if(l < pLev) {
+                /*lvSeg.style.backgroundColor = "#e00543";*/
+                lvSeg.style.color = "#fdf1db";
+            } else {
+                lvSeg.style.backgroundColor = null;
+                lvSeg.style.color = "white";
+            }
+
+            lvBar.appendChild(lvSeg);
+        }
+
+        const fakeBar = document.createElement("div");
+        fakeBar.style.height = "20px";
+        fakeBar.style.width = "80%";
+        fakeBar.style.backgroundColor = "#222222";
+        fakeBar.style.border = "5px solid #555555";
+        fakeBar.style.display = "flex";
+
+        const animBar = document.createElement("div");
+        animBar.classList.add("anim-bar");
+
+        fakeBar.appendChild(animBar);
+
+        box.appendChild(icon);
+
+        abilityBlock.appendChild(box);
+        barContainer.appendChild(lvBar);
+        barContainer.appendChild(fakeBar);
+        abilityBlock.appendChild(barContainer);
+
+        modal.querySelector("#ability-levels").appendChild(abilityBlock);
+    }
+
+    setTimeout(() => {
+        modal.querySelectorAll(".anim-bar").forEach((e,i) => {
+            e.style.width = 100 * (lvs[i] / maxLvs[i]) + "%";
+        });
+    }, 50);
+
+    modal.querySelectorAll(".ability-block").forEach((e) => {
+        e.addEventListener("mouseenter", function() {
+            modal.querySelector("#ability-name").innerHTML = abilities[e.ab].name;
+            modal.querySelector("#ability-text").innerHTML = abilities[e.ab].text;
+        });
+    });
+
+    const e = document.createEvent("HTMLEvents");
+    e.initEvent("mouseenter", true, false);
+    modal.querySelector(".ability-block").dispatchEvent(e);
 }
 
 jshttp.open("GET", "../db/whitelist.json");
@@ -686,6 +822,81 @@ trhttp.onload = function() {
 }
 trhttp.open("GET", "../db/trinkets.json");
 trhttp.send();
+
+abhttp.onload = function() {
+    abilities = JSON.parse(this.responseText);
+    abKeys = Object.keys(abilities);
+
+    const labDiv = document.querySelector(".armory-sidebar-left .abilities");
+    const rabDiv = document.querySelector(".armory-sidebar-right .abilities");
+
+    let k = 0;
+    let side = 'l';
+    for(let i = 0; i < abKeys.length; i++) {
+        a = abKeys[i];
+        let base = a.includes("Base"); /* Is this a base ability */
+        /* Switch sides */
+        if(a == "Vein_Miner_Base") { 
+            side = 'r';
+            k = 0;
+        } 
+        /* Ordinary handler stuff */
+        if(base) {
+            /* Create a new row on every third */
+            if(k % 3 == 0) {
+                const newRow = document.createElement("div");
+                newRow.classList.add("ability-row");
+                if(side == 'l') {
+                    labDiv.appendChild(newRow);
+                } else {
+                    rabDiv.appendChild(newRow);
+                }
+            }
+            
+            /* Create box */
+            const boxContainer = document.createElement("div");
+            boxContainer.classList.add("ability", "box-left");
+            boxContainer.id = "ab-" + a.toLowerCase().replace("_", "-");
+
+            const box = document.createElement("div");
+            box.classList.add("ability-box", "grey-box");
+            box.addEventListener("click", popModal);
+            box.abId = a;
+
+            const icon = document.createElement("div");
+            icon.classList.add("ability-icon");
+            icon.style.backgroundImage = "url(" + spritePrefix + "/abilities/" + abilities[a].id + ".png)";
+
+            const tt = document.createElement("span");
+            tt.classList.add("ability-tt");
+            tt.innerHTML = abilities[a].name;
+
+            box.appendChild(icon);
+            box.appendChild(tt);
+            boxContainer.appendChild(box);
+
+            if(side == 'l') {
+                const rows = labDiv.querySelectorAll(".ability-row");
+                const r = rows[rows.length - 1];
+                r.appendChild(boxContainer);
+            } else {
+                const rows = rabDiv.querySelectorAll(".ability-row");
+                const r = rows[rows.length - 1];
+                r.appendChild(boxContainer);
+            }
+            k += 1;
+        }
+    }
+}
+abhttp.open("GET", "../db/abilities.json");
+abhttp.send();
+
+window.onclick = function(evt) {
+    if(evt.target == document.querySelector("#armory-modal")) {
+        document.querySelector("#armory-modal").style.backgroundColor = null;
+        document.querySelector("#armory-modal").style.display = "none";
+    }
+}
 
 setTimeout(loadPlayers, 200);
 
