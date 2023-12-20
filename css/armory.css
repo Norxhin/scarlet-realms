@@ -10,7 +10,7 @@
 /***Scroll***/
 .scroll-header {
     text-align: center;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
 }
 .scroll-header h2 {
     margin: 0;
@@ -33,20 +33,20 @@
     text-align: center;
     width: 20%;
     padding: 8px 4px;
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
     border-color: #555555;
     border-style: solid;
     border-width: 2px 1px;
 }
 .scroll-active {
-    background-color: #CCCCCC;
+    background-color: #cccccc;
 }
 .nempty h3 {
     margin: 5px 0;
 }
 .nempty:hover {
     cursor: pointer;
-    background-color: #CCCCCC;
+    background-color: #cccccc;
 }
 .elempty {
     background-color: #777777;
@@ -58,7 +58,7 @@
     display: none;
 }
 .scroll-btn {
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
 }
 
 /**Header**/
@@ -66,7 +66,7 @@
     display: flex;
     width: 80%;
     margin: 0 5% 0 15%;
-    color: #FDF1DB;
+    color: #fdf1db;
     text-shadow: 2px 2px black;
 }
 #armory-header-stats {
@@ -77,10 +77,6 @@
     display: flex;
     width: 40%;
     justify-content: center;
-}
-#selector-abilities {
-    cursor: default !important;
-    color: #555555;
 }
 #selector-talents {
     cursor: default !important;
@@ -120,7 +116,7 @@
 .armory-sidebar-left {
     width: 23.75%;
     margin-top: 20px;
-    color: #FDF1DB;
+    color: #fdf1db;
 }
 .adv-stats {
     display: none;
@@ -130,7 +126,7 @@
 .armory-img-box{
     text-align: center;
     width: 40%;
-    color: #FDF1DB;
+    color: #fdf1db;
 }
 #progressBar {
     width: 80%;
@@ -141,7 +137,7 @@
 #lvProgress {
     width: 0%;
     height: 10px;
-    background-color: #E00543;
+    background-color: #e00543;
 }
 
 /**Gear Box**/
@@ -186,7 +182,7 @@
 }
 .box-left {
     margin-left: 0;
-    margin-right: auto;
+    /*margin-right: auto;*/
 }
 .box-right {
     margin-left: auto;
@@ -231,7 +227,6 @@
     color: #fdf1db;
     font-weight: 800;
 }
-
 .armory-sidebar-right .adv-stats {
     color: #fdf1db;
     max-height: 450px;
@@ -239,4 +234,135 @@
 }
 .armory-sidebar-right .adv-stats::-webkit-scrollbar {
     display: none;
+}
+
+/* Abilities */
+.ability-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+.ability {
+    display: flex;
+    width: calc(100% / 3);
+    height: 104px;
+    justify-content: center;
+    align-items: center;
+}
+.ability-box {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(85, 85, 85, 0.6);
+    border-style: solid;
+    border-color: rgba(85, 85, 85);
+    border-width: 4px;
+    /*margin-bottom: 40px;*/
+    position: relative;
+    cursor: pointer;
+}
+.grey-box {
+    -webkit-filter: grayscale(100%) contrast(80%);
+       -moz-filter: grayscale(100%) contrast(80%);
+         -o-filter: grayscale(100%) contrast(80%);
+        -ms-filter: grayscale(100%) contrast(80%);
+            filter: grayscale(100%) contrast(80%); 
+}
+.ability-box:hover .ability-tt {
+    visibility: visible;
+    opacity: 1;
+}
+.ability-icon {
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+.ability-tt {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555555;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.ability-tt::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555555 transparent;
+}
+#armory-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    transition: background-color 0.3s linear;
+
+}
+#modal-content {
+    background-color: rgba(5, 14, 27, 0.8);
+    color: #fdf1db;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+.modal-box {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(85, 85, 85, 0.6);
+    border-style: solid;
+    border-color: rgba(85, 85, 85);
+    border-width: 4px;
+    /*margin-bottom: 40px;*/
+    position: relative;
+}
+.modal-icon {
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+#ability-content {
+    display: flex;
+}
+#ability-levels {
+    width: 70%;
+}
+.ability-block {
+    margin-bottom: 20px;
+}
+#ability-description {
+    width: 30%;
+}
+.anim-bar {
+    height: 20px;
+    width: 0%;
+    border: 1px solid #e00543;
+    background-color: #e00543;
+    transition: width 0.3s linear;
 }

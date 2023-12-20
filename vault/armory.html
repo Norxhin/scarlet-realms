@@ -102,7 +102,7 @@
             <div id="armory-header-selector">
                 <div id="selector-basic" onclick="statSwap(0)"><h3>Basic</h3></div>
                 <div id="selector-advanced" onclick = "statSwap(1)"><h3>Advanced</h3></div>
-                <div id="selector-abilities"><h3>Abiities</h3></div>
+                <div id="selector-abilities" onclick = "statSwap(2)"><h3>Abiities</h3></div>
                 <div id="selector-talents"><h3>Talents</h3></div>
                 <div id="selector-expertise"><h3>Expertise</h3></div>
             </div>
@@ -142,6 +142,8 @@
                     <div class="stat-block">
                         <h4 class="stat-label">Vaults Failed</h4><h4 id="statVFailed"></h4>
                     </div>
+                </div>
+                <div class="abilities">
                 </div>
             </div>
             <div class="armory-img-box">
@@ -354,6 +356,22 @@
                     </div>
                     <div class="stat-block">
                         <h4 class="stat-label">Velara Affinity</h4><h4 id="statVelara" class="gear-stat stat-pct"></h4>
+                    </div>
+                </div>
+                <div class="abilities">
+                </div>
+            </div>
+            <div id="armory-modal">
+                <div id="modal-content">
+                    <h1>Ability Name</h1>
+                    <hr>
+                    <h3>Acquired Abilities</h3>
+                    <div id="ability-content">
+                        <div id="ability-levels"></div>
+                        <div id="ability-description">
+                            <h2 id="ability-name"></h2>
+                            <h3 id="ability-text"></h3>
+                        </div>
                     </div>
                 </div>
             </div>

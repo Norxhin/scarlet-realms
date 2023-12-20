@@ -1,0 +1,380 @@
+{
+    "Nova_Base": {
+        "name": "Nova",
+        "id": "nova",
+        "text": "Deal a percentage of your ability power in a <span style=\"color: rgb(51, 255, 109)\">radius</span> around yourself. <span style=\"color: rgb(252, 245, 197)\">Nova's</span> damage decreases the further away the target is hit in its radius.",
+        "maxLevels": 8
+    },
+    "Nova_Slow": {
+        "name": "Frost Nova",
+        "id": "nova_speed",
+        "text": "Changes Nova to freeze mobs around in a <span style=\"color: rgb(51, 255, 109)\">radius</span>. The mobs will stay frozen for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>, and then get <span style=\"color: rgb(209, 208, 174)\">Hypothermia</span>, causing them to be permanently slowed and take damage every 3 seconds.",
+        "maxLevels": 8
+    },
+    "Nova_Dot": {
+        "name": "Poison Nova",
+        "id": "nova_dot",
+        "text": "Changes Nova to instead inflict a percentage of your ability power through <span style=\"color: rgb(111, 233, 90)\">poison</span>. The damage will be dealt over a <span style=\"color: rgb(112, 36, 172)\">period of time</span>.",
+        "maxLevels": 8
+    },
+    "Rampage_Base": {
+        "name": "Rampage",
+        "id": "rampage",
+        "text": "Puts you in a state of rampage, giving you an additional <span style=\"color: rgb(194, 54, 39)\">physical damage</span> increase while active.",
+        "maxLevels": 4
+    },
+    "Rampage_Leech": {
+        "name": "Vampiric",
+        "id": "rampage_leech",
+        "text": "Changes rampage to give you <span style=\"color: rgb(194, 54, 39)\">life leech</span> instead of increasing your damage while rampaging.",
+        "maxLevels": 4
+    },
+    "Rampage_Chain": {
+        "name": "Chaining",
+        "id": "rampage_chain",
+        "text": "Changes rampage to give your attacks a <span style=\"color: rgb(194, 54, 39)\">chaining effect</span>, hitting multiple mobs beyond the first, instead of increasing your damage while rampaging.",
+        "maxLevels": 4
+    },
+    "Totem_Base": {
+        "name": "Rejuvenation Totem",
+        "id": "totem",
+        "text": "Creates a totem near you that <span style=\"color: rgb(125, 245, 135)\">heals</span> all players in a <span style=\"color: rgb(51, 255, 109)\">radius</span> per second.",
+        "maxLevels": 8
+    },
+    "Totem_Player_Damage": {
+        "name": "Wrath Totem",
+        "id": "totem_player_damage",
+        "text": "Creates a totem near you that increases <span style=\"color: rgb(194, 54, 39)\">physical damage</span> of all players in a <span style=\"color: rgb(51, 255, 109)\">radius</span>.",
+        "maxLevels": 8
+    },
+    "Totem_Mana_Regen": {
+        "name": "Spirit Totem",
+        "id": "totem_mana_regen",
+        "text": "Creates a totem near you that regenerates <span style=\"color: rgb(3, 83, 215)\">mana</span> of all players in a <span style=\"color: rgb(51, 255, 109)\">radius</span> per second.",
+        "maxLevels": 8
+    },
+    "Totem_Mob_Damage": {
+        "name": "Hatred Totem",
+        "id": "totem_mob_damage",
+        "text": "Creates a totem near you that does a minimal percentage of your ability power to all mobs in a <span style=\"color: rgb(51, 255, 109)\">radius</span> on a <span style=\"color: rgb(140, 73, 22)\">delay</span>. These hits apply any on-hit effects you may have, with the exception of Lucky Hit.",
+        "maxLevels": 8
+    },
+    "Empower_Base": {
+        "name": "Empower",
+        "id": "empower",
+        "text": "Gives you an aura of <span style=\"color: rgb(246, 205, 14)\">movement speed</span>. Affecting you and other players within <span style=\"color: rgb(51, 255, 109)\">range</span> while active.",
+        "maxLevels": 8
+    },
+    "Empower_Ice_Armor": {
+        "name": "Ice Armor",
+        "id": "empower_ice_armour",
+        "text": "Encase yourself in a barrier of frost, <span style=\"color: rgb(47, 225, 250)\">chilling</span> any mob that hits you for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span> while active.",
+        "maxLevels": 8
+    },
+    "Empower_Slowness_Aura": {
+        "name": "Entropic Bind",
+        "id": "empower_entropy",
+        "text": "Gives you an aura of entropy <span style=\"color: rgb(209, 208, 174)\">slowing down</span> mobs in a <span style=\"color: rgb(51, 255, 109)\">radius</span> around you while active.",
+        "maxLevels": 8
+    },
+    "Javelin_Base": {
+        "name": "Javelin",
+        "id": "javelin",
+        "text": "Summon a magical Javelin to hit your foes from afar. Deals an amount of <span style=\"color: rgb(194, 54, 39)\">damage</span> based off your weapon damage and <span style=\"color: rgb(255, 176, 15)\">knocks mobs away</span> on impact.",
+        "maxLevels": 2
+    },
+    "Javelin_Piercing": {
+        "name": "Piercing Javelin",
+        "id": "javelin_piercing",
+        "text": "Summon a magical Javelin to hit your foes from afar. Deals an amount of <span style=\"color: rgb(194, 54, 39)\">damage</span> based off your weapon damage and <span style=\"color: rgb(64, 32, 184)\">pierces an amount of mobs</span> on impact.",
+        "maxLevels": 2
+    },
+    "Javelin_Scatter": {
+        "name": "Scatter Javelin",
+        "id": "javelin_scatter",
+        "text": "Summon a magical Javelin to hit your foes from afar. Deals an amount of <span style=\"color: rgb(194, 54, 39)\">damage</span> based off your weapon damage and <span style=\"color: rgb(222, 179, 8)\">scatters an amount of javelins</span> on impact <span style=\"color: rgb(8, 94, 222)\">bouncing several times</span>.",
+        "maxLevels": 2
+    },
+    "Javelin_Sight": {
+        "name": "Sight Javelin",
+        "id": "javelin_sight",
+        "text": "Summon a magical Javelin to hit your foes from afar. Deals an amount of <span style=\"color: rgb(194, 54, 39)\">damage</span> based off your weapon damage and <span style=\"color: rgb(51, 255, 109)\">scans the area in a radius</span> on impact, revealing chests and mobs.",
+        "maxLevels": 2
+    },
+    "Smite_Base": {
+        "name": "Smite",
+        "id": "smite_hand2",
+        "text": "While active, <span style=\"color: rgb(252, 245, 197)\">Smite</span> while <span style=\"color: rgb(168, 98, 37)\">periodically</span> strike a mob within <span style=\"color: rgb(51, 255, 109)\">range</span> dealing a percentage of your ability power, and transferring any on-hit modifiers to the target.",
+        "maxLevels": 8
+    },
+    "Smite_Archon": {
+        "name": "Archon",
+        "id": "smite_archon",
+        "text": "While active, <span style=\"color: rgb(252, 245, 197)\">Archon</span> will turn you into a spark. Any mob you physically touch will get bolted for a percentage of your ability power and gives you <span style=\"color: rgb(219, 176, 220)\">durability resistance</span>.",
+        "maxLevels": 8
+    },
+    "Stonefall_Base": {
+        "name": "Stonefall",
+        "id": "stonefall",
+        "text": "Reduces <span style=\"color: rgb(194, 54, 39)\">fall damage</span> when landing while <span style=\"color: rgb(112, 36, 172)\">active</span>, <span style=\"color: rgb(51, 255, 109)\">knocking back</span> mobs in a radius.",
+        "maxLevels": 8
+    },
+    "Stonefall_Snow": {
+        "name": "Hero's Landing",
+        "id": "stonefall_snow",
+        "text": "Reduces <span style=\"color: rgb(194, 54, 39)\">fall damage</span> when landing while <span style=\"color: rgb(112, 36, 172)\">active</span>, dealing damage based off ability power to nearby mobs in a radius. The radius is increased with your fall distance.",
+        "maxLevels": 8
+    },
+    "Stonefall_Cold": {
+        "name": "Coldsnap",
+        "id": "stonefall_cold",
+        "text": "Reduces <span style=\"color: rgb(194, 54, 39)\">fall damage</span> when landing while <span style=\"color: rgb(112, 36, 172)\">active</span>, <span style=\"color: rgb(47, 225, 250)\">Chilling</span> and creating <span style=\"color: rgb(47, 225, 250)\">glacial prisons</span> mobs in a radius. The radius is affected by fall distance.",
+        "maxLevels": 8
+    },
+    "Battle_Cry_Base": {
+        "name": "Battle Cry",
+        "id": "battle_cry",
+        "text": "Drain the essence of mobs around you, gathering <span style=\"color: rgb(54, 255, 167)\">Battle Cry stacks</span> and release an <span style=\"color: rgb(107, 28, 0)\">amount</span> of stacks, giving you <span style=\"color: rgb(194, 54, 39)\">bonus attack damage</span> on your next direct on-hit attack. The stacks will fizzle after a <span style=\"color: rgb(112, 36, 172)\">duration of time</span> if not used.",
+        "maxLevels": 4
+    },
+    "Battle_Cry_Spectral_Strike": {
+        "name": "Spectral Cry",
+        "id": "battle_cry_spectral_strike",
+        "text": "Drain the essence of mobs around you, gathering <span style=\"color: rgb(54, 255, 167)\">Battle Cry stacks</span> and release an <span style=\"color: rgb(107, 28, 0)\">amount</span> of stacks, adding ability power as damage, on your next direct on-hit attack. The stacks will fizzle after a <span style=\"color: rgb(112, 36, 172)\">duration of time</span> if not used.",
+        "maxLevels": 4
+    },
+    "Battle_Cry_Lucky_Strike": {
+        "name": "Lucky Cry",
+        "id": "battle_cry_lucky_strike",
+        "text": "Drain the essence of mobs around you, gathering <span style=\"color: rgb(54, 255, 167)\">Battle Cry stacks</span> and release an <span style=\"color: rgb(107, 28, 0)\">amount</span> of stacks, giving you <span style=\"color: rgb(109, 245, 163)\">bonus Lucky Hit chance</span> on your next direct on-hit attack. The stacks will fizzle after a <span style=\"color: rgb(112, 36, 172)\">duration of time</span> if not used.",
+        "maxLevels": 4
+    },
+    "Storm_Arrow_Base": {
+        "name": "Storm Arrow",
+        "id": "thunderstorm",
+        "text": "Shoot an arrow that creates a storm above upon impact. Deals an amount of damage based off your ability power. The storm cloud stays for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span> and will <span style=\"color: rgb(112, 36, 172)\">strike</span> every so often.",
+        "maxLevels": 8
+    },
+    "Storm_Arrow_Blizzard": {
+        "name": "Blizzard Arrow",
+        "id": "blizzard",
+        "text": "Shoot an arrow that creates an ice storm above upon impact. Each ice shard will freeze mobs on hit for a duration. Also has a chance to frostbite the mob for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span> every so often.",
+        "maxLevels": 8
+    },
+    "Fireball_Base": {
+        "name": "Fireball",
+        "id": "fireball",
+        "text": "Summon a magical Fireball to hit your foes afar. Deals an amount of damage based off your ability power.",
+        "maxLevels": 8
+    },
+    "Fireball_Volley": {
+        "name": "Fire Volley",
+        "id": "fireball_volley",
+        "text": "Summon a magical bouncing Fireball that scorches mobs in its path and deals an amount of damage based off your ability power. After a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>, it explodes in a <span style=\"color: rgb(51, 255, 109)\">radius</span> dealing its full damage.",
+        "maxLevels": 8
+    },
+    "Fireball_Fireshot": {
+        "name": "Fireshot",
+        "id": "fireball_fireshot",
+        "text": "Summons a small magical fireshot to hit mobs from afar. Deals an amount of damage based of your ability power, and transfers any <span style=\"color: rgb(252, 245, 197)\">on-hit effects</span> from you.",
+        "maxLevels": 8
+    },
+    "Vein_Miner_Base": {
+        "name": "Vein Miner",
+        "id": "vein_miner",
+        "text": "Allows you to mine multiple <span style=\"color: rgb(148, 93, 56)\">blocks</span> at once!",
+        "maxLevels": 4
+    },
+    "Vein_Miner_Durability": {
+        "name": "Finesse Miner",
+        "id": "vein_miner_durability",
+        "text": "Changes Vein Miner to gain a chance of ignoring taking <span style=\"color: rgb(220, 196, 240)\">durability damage</span> while using it to mine blocks. However, the amount of <span style=\"color: rgb(148, 93, 56)\">blocks mined</span> is lowered.",
+        "maxLevels": 4
+    },
+    "Vein_Miner_Void": {
+        "name": "Void Miner",
+        "id": "vein_miner_void",
+        "text": "Changes Vein Miner to void any blocks it mines <span style=\"color: rgb(255, 235, 7)\">inside a vault</span> with the exception of vault ores. However the amount of <span style=\"color: rgb(148, 93, 56)\">blocks mined</span> is lowered.",
+        "maxLevels": 4
+    },
+    "Ghost_Walk_Base": {
+        "name": "Ghost Walk",
+        "id": "ghost_walk",
+        "text": "Makes you invisible for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>. Attacking anything during the Ghost Walk will cancel its effect.",
+        "maxLevels": 2
+    },
+    "Ghost_Walk_Spirit": {
+        "name": "Spirit Walk",
+        "id": "ghost_walk_spirit_walk",
+        "text": "Makes you invisible for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>. Attacking anything, breaking a block, or opening a container during the <span style=\"color: rgb(252, 245, 197)\">Spirit Walk</span> will cancel its effect.",
+        "maxLevels": 2
+    },
+    "Dash_Base": {
+        "name": "Dash",
+        "id": "dash",
+        "text": "Propels you a <span style=\"color: rgb(242, 230, 133)\">distance</span> in the direction you are facing!",
+        "maxLevels": 8
+    },
+    "Dash_Damage": {
+        "name": "Bullet",
+        "id": "dash_damage",
+        "text": "Turns your dashes into bullets, making you deal a percentage of your <span style=\"color: rgb(194, 54, 39)\">physical damage</span> to any mob you hit with you dash.",
+        "maxLevels": 8
+    },
+    "Dash_Warp": {
+        "name": "Warp",
+        "id": "dash_warp",
+        "text": "Shoot a <span style=\"color: rgb(90, 224, 156)\">magic arrow</span> that teleports you to its location <span style=\"color: rgb(252, 245, 197)\">on impact</span>. If you hit a mob or another player you swap places with them.",
+        "maxLevels": 8
+    },
+    "Mega_Jump_Base": {
+        "name": "Mega Jump",
+        "id": "mega_jump",
+        "text": "Gives you the ability to <span style=\"color: rgb(13, 122, 57)\">mega jump</span> up in the air.",
+        "maxLevels": 5
+    },
+    "Mega_Jump_Break_Down": {
+        "name": "Mega Dig",
+        "id": "mega_jump_break_down",
+        "text": "Changes Mega Jump to a Mega Dig! Instead of launching you up in the air it drills you downwards in to blocks, breaking them on the way.",
+        "maxLevels": 5
+    },
+    "Shell_Base": {
+        "name": "Shell",
+        "id": "shell",
+        "text": "While active, <span style=\"color: rgb(252, 245, 197)\">Shell</span> will give you hardened skin, giving you a <span style=\"color: rgb(255, 235, 7)\">chance to stun mobs</span> when getting hit.",
+        "maxLevels": 8
+    },
+    "Shell_Porcupine": {
+        "name": "Porcupine",
+        "id": "shell_porcupine",
+        "text": "While active, <span style=\"color: rgb(252, 245, 197)\">Porcupine</span> will increase your <span style=\"color: rgb(194, 54, 39)\">thorns damage</span> and give you <span style=\"color: rgb(219, 176, 220)\">durability resistance</span>.",
+        "maxLevels": 8
+    },
+    "Shell_Quill": {
+        "name": "Quill",
+        "id": "shell_quill",
+        "text": "While active, <span style=\"color: rgb(252, 245, 197)\">Porcupine</span> will increase your <span style=\"color: rgb(194, 54, 39)\">thorns damage</span> and <span style=\"color: rgb(194, 54, 39)\">chain your thorns</span> to hit additional targets. In addition, <span style=\"color: rgb(252, 245, 197)\">Quill</span> also gives you a <span style=\"color: rgb(219, 176, 220)\">durability resistance</span> while active.",
+        "maxLevels": 8
+    },
+    "Heal_Base": {
+        "name": "Heal",
+        "id": "heal",
+        "text": "Heals you for an amount of <span style=\"color: rgb(125, 245, 135)\">hitpoints</span>.",
+        "maxLevels": 8
+    },
+    "Heal_Group": {
+        "name": "Group Heal",
+        "id": "heal_group",
+        "text": "Changes your Heal to a group heal! Healing yourself and teammates around you for an amount of <span style=\"color: rgb(125, 245, 135)\">hitpoints</span>.",
+        "maxLevels": 8
+    },
+    "Heal_Cleanse": {
+        "name": "Cleanse",
+        "id": "heal_effect",
+        "text": "Changes your Heal to instead Cleanse any negative effect affecting you.",
+        "maxLevels": 8
+    },
+    "Hunter_Base": {
+        "name": "Hunter",
+        "id": "hunter",
+        "text": "Highlights wooden chests inside the vault in a <span style=\"color: rgb(51, 255, 109)\">radius</span> for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>.",
+        "maxLevels": 8
+    },
+    "Hunter_Blocks": {
+        "name": "Hunter: Observer",
+        "id": "hunter_blocks",
+        "text": "Changes Hunter to instead display objectives within a <span style=\"color: rgb(51, 255, 109)\">radius</span> for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>.",
+        "maxLevels": 8
+    },
+    "Hunter_Gilded": {
+        "name": "Hunter: Gilded",
+        "id": "hunter_gilded",
+        "text": "Changes Hunter to instead display Gilded chests within a <span style=\"color: rgb(51, 255, 109)\">radius</span> for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>.",
+        "maxLevels": 8
+    },
+    "Hunter_Living": {
+        "name": "Hunter: Living",
+        "id": "hunter_living",
+        "text": "Changes Hunter to instead Living chests within a <span style=\"color: rgb(51, 255, 109)\">radius</span> for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>.",
+        "maxLevels": 8
+    },
+    "Hunter_Ornate": {
+        "name": "Hunter: Ornate",
+        "id": "hunter_ornate",
+        "text": "Changes Hunter to instead display Ornate chests within a <span style=\"color: rgb(51, 255, 109)\">radius</span> for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>.",
+        "maxLevels": 8
+    },
+    "Hunter_Coins": {
+        "name": "Hunter: Coins",
+        "id": "hunter_coins",
+        "text": "Changes Hunter to instead display Coin Piles within a <span style=\"color: rgb(51, 255, 109)\">radius</span> for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>.",
+        "maxLevels": 8
+    },
+    "Taunt_Base": {
+        "name": "Taunt",
+        "id": "taunt",
+        "text": "Taunts mobs around you in a <span style=\"color: rgb(51, 255, 109)\">radius</span>, angering them towards you, and making them vulnerable for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>. Each level of Vulnerability increases damage taken by that mob by 10%.",
+        "maxLevels": 8
+    },
+    "Taunt_Repel": {
+        "name": "Fear",
+        "id": "taunt_repel",
+        "text": "Instead of taunting mobs around you, they are now feared by you in a <span style=\"color: rgb(51, 255, 109)\">radius</span>. A feared mob will get <span style=\"color: rgb(242, 230, 133)\">pushed away</span> and refuse to attack you for a <span style=\"color: rgb(112, 36, 172)\">duration of time</span>.",
+        "maxLevels": 8
+    },
+    "Taunt_Charm": {
+        "name": "Charm",
+        "id": "taunt_charm",
+        "text": "Charms a <span style=\"color: rgb(205, 0, 155)\">number of mobs</span> within a <span style=\"color: rgb(51, 255, 109)\">radius</span> around you to fight for you. Charmed mobs deal a pecentage of your ability power as damage to their targets and can trigger <span style=\"color: rgb(252, 245, 197)\">on-hit effects</span>.",
+        "maxLevels": 8
+    },
+    "Mana_Shield_Base": {
+        "name": "Mana Shield",
+        "id": "mana_shield",
+        "text": "Gives you a shield that <span style=\"color: rgb(3, 83, 215)\">redirects a percentage</span> of incoming damage to your <span style=\"color: rgb()\">mana pool</span>.",
+        "maxLevels": 10
+    },
+    "Mana_Shield_Retribution": {
+        "name": "Retribution",
+        "id": "mana_shield_retribution",
+        "text": "Gives you a mana shield that <span style=\"color: rgb(142, 237, 217)\">redirects a percentage</span> of incoming damage to your <span style=\"color: rgb(3, 83, 215)\">mana pool</span>. After absorbing damage, your next attack's damage will be added to <span style=\"color: rgb(194, 54, 39)\">a percentage of the absorbed damage</span> and dealt to all mobs in a <span style=\"color: rgb(51, 255, 109)\">radius</span> around your target.",
+        "maxLevels": 10
+    },
+    "Mana_Shield_Implode": {
+        "name": "Implode",
+        "id": "mana_shield_implode",
+        "text": "Drains all of your mana dealing damage equal to a <span style=\"color: rgb(194, 54, 39)\">percentage</span> of the mana drained to all enemies in a <span style=\"color: rgb(51, 255, 109)\">radius</span>.",
+        "maxLevels": 10
+    },
+    "Farmer_Base": {
+        "name": "Farmer",
+        "id": "farmer",
+        "text": "Increases growth speed on crops in a <span style=\"color: rgb(51, 255, 109)\">radius</span> using a <span style=\"color: rgb(140, 73, 22)\">delay</span>. Farmer targets:<ul><li>Seeds</li><li>Potatoes</li><li>Carrots</li><li>Beet Root</li><li>Flax Seeds</li></ul>",
+        "maxLevels": 4
+    },
+    "Farmer_Melon": {
+        "name": "Farmer: Cultivator",
+        "id": "farmer_melon",
+        "text": "Increases growth speed on crops in a <span style=\"color: rgb(51, 255, 109)\">radius</span> using a <span style=\"color: rgb(140, 73, 22)\">delay</span>. Cultivator targets all base ability targets, plus:<ul><li>Melon</li><li>Pumpkins</li></ul>",
+        "maxLevels": 4
+    },
+    "Farmer_Cactus": {
+        "name": "Farmer: Gardener",
+        "id": "farmer_cactus",
+        "text": "Increases growth speed on coprs in a <span style=\"color: rgb(51, 255, 109)\">radius</span> using a <span style=\"color: rgb(140, 73, 22)\">delay</span>. Gardener targets all base ability targets, plus:<ul><li>Cactus</li><li>Sugar Cane</li><li>Nether Wart</li></ul>",
+        "maxLevels": 4
+    },
+    "Farmer_Animal": {
+        "name": "Farmer: Rancher",
+        "id": "farmer_animal",
+        "text": "Changes Farmer to also incentivise <span style=\"color: rgb(245, 178, 249)\">baby animals</span> to become big bois! It does so with a <span style=\"color: rgb(140, 73, 22)\">delay</span> in a <span style=\"color: rgb(51, 255, 109)\">radius</span> around you. Rancher targets all base ability targets, plus:<ul><li>Baby Animals</li><li>Baby Villagers</li></ul>",
+        "maxLevels": 4
+    },
+    "Summon_Eternal_Base": {
+        "name": "Summon Eternal",
+        "id": "summon_eternal",
+        "text": "Summons your <span style=\"color: rgb(199, 255, 231)\">eternals</span>! This ability requires you to have at least one eternal alive on an Eternal Pedestal, or it will do nothing.",
+        "maxLevels": 2
+    }
+}
