@@ -1,19 +1,19 @@
 {
   "playerUUID": "6bc0c04f-e1ff-4840-8e82-0fc57e76e46c",
   "playerNickname": "Death2725",
-  "timestamp": 1703049531,
+  "timestamp": 1703051207,
   "completed": 0,
   "survived": 0,
-  "failed": 0,
+  "failed": 1,
   "vaultLevel": 0,
   "levelPercent": 0.0,
   "vanillaAttributes": {
     "minecraft:generic.max_health": 20.0,
     "minecraft:generic.knockback_resistance": 0.0,
     "minecraft:generic.movement_speed": 0.10000000149011612,
-    "minecraft:generic.attack_damage": 5.0,
+    "minecraft:generic.attack_damage": 1.0,
     "minecraft:generic.attack_knockback": 0.0,
-    "minecraft:generic.attack_speed": 1.2000000476837158,
+    "minecraft:generic.attack_speed": 4.0,
     "minecraft:generic.armor": 8.0,
     "minecraft:generic.armor_toughness": 0.0,
     "minecraft:generic.luck": 0.0,
@@ -73,35 +73,29 @@
     "Idona": 0
   },
   "equipment": {
-    "MAINHAND": {
-      "itemKey": "minecraft:diamond_pickaxe",
-      "count": 1,
-      "nbt": "{Damage:1158}",
-      "gearData": "{\"id\":\"8f95cf03-a247-41b3-9224-6c2b81788e32\",\"attributes\":[]}"
-    },
     "FEET": {
       "itemKey": "minecraft:iron_boots",
       "count": 1,
-      "nbt": "{Damage:3}",
-      "gearData": "{\"id\":\"68f573db-0884-4aee-a46d-186060413b86\",\"attributes\":[]}"
+      "nbt": "{Damage:7}",
+      "gearData": "{\"id\":\"43c5127c-feb2-4552-af03-391d276d1ee5\",\"attributes\":[]}"
     },
     "LEGS": {
       "itemKey": "minecraft:iron_leggings",
       "count": 1,
-      "nbt": "{Damage:3}",
-      "gearData": "{\"id\":\"8f867666-2b8b-4fac-b40f-f7af36fe175b\",\"attributes\":[]}"
+      "nbt": "{Damage:7}",
+      "gearData": "{\"id\":\"4b2b5826-df53-4e0a-a36d-696fd622497c\",\"attributes\":[]}"
     },
     "CHEST": {
       "itemKey": "minecraft:iron_chestplate",
       "count": 1,
-      "nbt": "{Damage:3}",
-      "gearData": "{\"id\":\"c509f02b-4cf7-4811-a631-55e0232cc2ec\",\"attributes\":[]}"
+      "nbt": "{Damage:7}",
+      "gearData": "{\"id\":\"238fca04-ea94-47c4-ad20-891a4882d4e1\",\"attributes\":[]}"
     },
     "HEAD": {
       "itemKey": "minecraft:iron_helmet",
       "count": 1,
-      "nbt": "{Damage:3}",
-      "gearData": "{\"id\":\"0ab2c93c-a2e5-448c-b7b6-5ae9fc90198f\",\"attributes\":[]}"
+      "nbt": "{Damage:7}",
+      "gearData": "{\"id\":\"9389263f-3cba-4b43-9b26-58a07fc6727a\",\"attributes\":[]}"
     }
   },
   "abilities": {},
