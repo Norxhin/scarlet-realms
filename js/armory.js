@@ -63,6 +63,7 @@ const advStatInfo = {
 const equip = ["charm", "HEAD", "OFFHAND", "blue_trinket", "CHEST", "MAINHAND", "red_trinket", "LEGS", "belt", "FEET"];
 const gears = document.getElementsByClassName("gear-item");
 let whitelist, trinkets, p, avatars, abilities, abKeys;
+let uuid = [];
 let playerData = {"players": []};
 let scrollIndex = 1;
 let activePlayer = 1;
@@ -148,19 +149,6 @@ async function setActive(n) {
 
     const statManaAmount = document.getElementById("statManaAmount");
     statManaAmount.innerHTML = pDat.vanillaAttributes["the_vault:generic.mana_max"];
-
-    /* Vault Stats */
-    const statVComplete = document.getElementById("statVComplete");
-    statVComplete.innerHTML = pDat.completed;
-
-    const statVAbandon = document.getElementById("statVAbandon");
-    statVAbandon.innerHTML = pDat.survived;
-
-    const statVFailed = document.getElementById("statVFailed");
-    statVFailed.innerHTML = pDat.failed;
-
-    const statVTotal = document.getElementById("statVTotal");
-    statVTotal.innerHTML = pDat.completed + pDat.survived + pDat.failed;
 
     /* Gear */
     /* Icons */
@@ -276,6 +264,55 @@ async function setActive(n) {
         }
     }
 
+    
+}
+
+function advStats() {
+    let pDat = playerData.players[activePlayer-1];
+    var n;
+
+    /* Vault Stats */
+    const statVComplete = document.getElementById("statVComplete");
+    statVComplete.innerHTML = pDat.completed;
+
+    const statVAbandon = document.getElementById("statVAbandon");
+    statVAbandon.innerHTML = pDat.survived;
+
+    const statVFailed = document.getElementById("statVFailed");
+    statVFailed.innerHTML = pDat.failed;
+
+    const statVTotal = document.getElementById("statVTotal");
+    statVTotal.innerHTML = pDat.completed + pDat.survived + pDat.failed;
+
+    /* Advanced Stats */
+    Object.keys(advStatInfo).forEach((i) => {
+        const e = advStatInfo[i];
+        const s = document.querySelector("#" + i);
+        if(s.classList.contains("vanilla-stat")) {
+            n = pDat.vanillaAttributes[e];
+            n *= (s.classList.contains("stat-pct") ? 100 : 1);
+            n *= s.classList.contains("stat-r1") ? 10 : 1;
+            n *= s.classList.contains("stat-r2") ? 100 : 1;
+            n = Math.round(n);
+            n /= s.classList.contains("stat-r1") ? 10 : 1;
+            n /= s.classList.contains("stat-r2") ? 100 : 1;
+            s.innerHTML = n + (s.classList.contains("stat-pct") ? "%" : "");
+        } else {
+            n = pDat.gearAttributes[e];
+            n *= (s.classList.contains("stat-pct") ? 100 : 1);
+            n *= s.classList.contains("stat-r1") ? 10 : 1;
+            n *= s.classList.contains("stat-r2") ? 100 : 1;
+            n = Math.round(n);
+            n /= s.classList.contains("stat-r1") ? 10 : 1;
+            n /= s.classList.contains("stat-r2") ? 100 : 1;
+            s.innerHTML = n + (s.classList.contains("stat-pct") ? "%" : "");
+        }
+    });
+}
+
+function loadAbilities() {
+    let pDat = playerData.players[activePlayer-1];
+
     /* Abilities */
     document.querySelectorAll(".ability-box").forEach((e) => {
         if(!e.classList.contains("grey-box")) { e.classList.add("grey-box") }
@@ -305,8 +342,8 @@ function loadPlayers() {
                     response.equipment[e].gearData = JSON.parse(response.equipment[e].gearData);
                 }
             });
-            levels.push("Level " + response.vaultLevel);            
-            playerData.players.push(response);
+            levels[uuid.indexOf(response.playerUUID)] = "Level " + response.vaultLevel;
+            playerData.players[uuid.indexOf(response.playerUUID)] = response;
         }
         uuhttp[i].send();
     }
@@ -322,6 +359,7 @@ function loadPlayers() {
 
 jshttp.onload = function() {
     whitelist = JSON.parse(this.responseText);
+    whitelist.members.forEach((e,i) => uuid[i] = e.uuid);
 
     avatars = [];
     for(m in whitelist.members) {
@@ -651,35 +689,6 @@ function fillTooltip(toolId, tt) {
     setTimeout(function (o) { o.style.opacity = 1 }, 50, o = tt);
 }
 
-function advStats() {
-    let pDat = playerData.players[activePlayer-1];
-    var n;
-
-    Object.keys(advStatInfo).forEach((i) => {
-        const e = advStatInfo[i];
-        const s = document.querySelector("#" + i);
-        if(s.classList.contains("vanilla-stat")) {
-            n = pDat.vanillaAttributes[e];
-            n *= (s.classList.contains("stat-pct") ? 100 : 1);
-            n *= s.classList.contains("stat-r1") ? 10 : 1;
-            n *= s.classList.contains("stat-r2") ? 100 : 1;
-            n = Math.round(n);
-            n /= s.classList.contains("stat-r1") ? 10 : 1;
-            n /= s.classList.contains("stat-r2") ? 100 : 1;
-            s.innerHTML = n + (s.classList.contains("stat-pct") ? "%" : "");
-        } else {
-            n = pDat.gearAttributes[e];
-            n *= (s.classList.contains("stat-pct") ? 100 : 1);
-            n *= s.classList.contains("stat-r1") ? 10 : 1;
-            n *= s.classList.contains("stat-r2") ? 100 : 1;
-            n = Math.round(n);
-            n /= s.classList.contains("stat-r1") ? 10 : 1;
-            n /= s.classList.contains("stat-r2") ? 100 : 1;
-            s.innerHTML = n + (s.classList.contains("stat-pct") ? "%" : "");
-        }
-    });
-}
-
 function hideTooltip() {
     tt.style.opacity = 0;
     /*setTimeout(function(o) { o.style.display = "none"}, 400, o = tt);*/
@@ -714,6 +723,8 @@ function statSwap(id) {
             document.querySelector("#armory-header-gear").innerHTML = "Detailed Statistics";
             break;
         case 2:
+            loadAbilities();
+
             document.querySelectorAll(".basic-stats").forEach((e) => { e.style.display = "none" });
             document.querySelectorAll(".adv-stats").forEach((e) => { e.style.display = "none" });
             document.querySelectorAll(".abilities").forEach((e) => { e.style.display = "block" });
