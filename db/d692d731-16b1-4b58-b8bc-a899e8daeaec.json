@@ -1,20 +1,20 @@
 {
   "playerUUID": "d692d731-16b1-4b58-b8bc-a899e8daeaec",
   "playerNickname": "ageorge6781",
-  "timestamp": 1704609203,
-  "completed": 1,
-  "survived": 0,
+  "timestamp": 1704660088,
+  "completed": 2,
+  "survived": 1,
   "failed": 0,
-  "vaultLevel": 3,
-  "levelPercent": 0.321,
+  "vaultLevel": 5,
+  "levelPercent": 0.376,
   "vanillaAttributes": {
     "minecraft:generic.max_health": 20.0,
     "minecraft:generic.knockback_resistance": 0.0,
     "minecraft:generic.movement_speed": 0.10000000149011612,
-    "minecraft:generic.attack_damage": 4.0,
+    "minecraft:generic.attack_damage": 7.0,
     "minecraft:generic.attack_knockback": 0.0,
     "minecraft:generic.attack_speed": 4.0,
-    "minecraft:generic.armor": 8.0,
+    "minecraft:generic.armor": 12.0,
     "minecraft:generic.armor_toughness": 0.0,
     "minecraft:generic.luck": 0.0,
     "botania:pixie_spawn_chance": 0.0,
@@ -40,7 +40,7 @@
     "the_vault:generic.thorns_damage": 0.0
   },
   "gearAttributes": {
-    "the_vault:ability_power": 0.0,
+    "the_vault:ability_power": 2.5,
     "the_vault:healing_effectiveness": 0.0,
     "the_vault:cooldown_reduction": 0.0,
     "the_vault:resistance": 0.5,
@@ -52,7 +52,7 @@
     "the_vault:on_hit_stun": 0.0,
     "the_vault:shocking_hit_chance": 0.0,
     "the_vault:sweeping_hit_chance": 0.0,
-    "the_vault:item_quantity": 0.0,
+    "the_vault:item_quantity": 0.03,
     "the_vault:item_rarity": 0.0,
     "the_vault:trap_disarming": 0.0,
     "the_vault:copiously": 0.0,
@@ -73,44 +73,42 @@
     "Idona": 0
   },
   "equipment": {
-    "MAINHAND": {
-      "itemKey": "the_vault:cooked_vault_steak",
-      "count": 14,
-      "gearData": "{\"id\":\"0365e578-26db-447d-b6c2-9d3c1984b60b\",\"attributes\":[]}"
-    },
     "FEET": {
       "itemKey": "minecraft:iron_boots",
       "count": 1,
-      "nbt": "{Damage:19}",
-      "gearData": "{\"id\":\"a0db430d-41c0-4557-bb26-e4db68464cfc\",\"attributes\":[]}"
+      "nbt": "{Damage:29}",
+      "gearData": "{\"id\":\"150779da-ff60-4f2a-a42a-647aed09a328\",\"attributes\":[]}"
     },
     "LEGS": {
       "itemKey": "minecraft:iron_leggings",
       "count": 1,
-      "nbt": "{Damage:19}",
-      "gearData": "{\"id\":\"1cb78782-334c-45c1-9315-7d7c13f1865d\",\"attributes\":[]}"
+      "nbt": "{Damage:29}",
+      "gearData": "{\"id\":\"b8a4bcb7-5f67-40e6-a9bd-2edaaac101b1\",\"attributes\":[]}"
     },
     "CHEST": {
-      "itemKey": "minecraft:iron_chestplate",
+      "itemKey": "the_vault:chestplate",
       "count": 1,
-      "nbt": "{Damage:19}",
-      "gearData": "{\"id\":\"21c625ca-c5f8-461c-90bd-61b7718fb208\",\"attributes\":[]}"
+      "nbt": "{clientCache:{color:[B;],colors:[I;11184810],gearName:[B;],jcolors:[I;4766456,15239698],model:\"the_vault:gear/armor/rusty_raider/chestplate\",rarity:0,rollType:\"Scrappy+\",state:2},vaultGearData:[L;-2623072555481421557L,-2373863683194310188L,1514722424829581433L,-1350007658135317181L,-3845640312894353244L,-6915813264439637853L,-2373852306127935438L,2967978579041901796L,2950605847436984484L,911980600092526850L,-2242578326589337558L,-6869114626581702926L,2191011123597322338L,-6869114626578554718L,-6625629571910555550L,-8066887450308341274L,-8535939276160334718L,46207217388525698L,-9006477482661863252L,-6309356029972603830L,2964494454720716836L,-7921083653035392860L,178421572362L,-8779192703683227072L,187088578663851818L,1441151880859222016L,7L,7106869330744781062L,-8892278021765426520L,269514L,-4430103872123437056L,-3259265941866231066L,92414394476581592L,381698370630402392L,7296478064338424896L,-9223372036854775808L,6066718503347557519L,73615099929L,0L,-7945135250097239496L,-6492552778204477179L,5377731723960422564L,164269855225845793L,-4899916394579099648L,-3845640312894353244L,-5050786112288044992L,8813272893706L,2905279156491124736L,1039959663846403692L,-9217596145817227798L,23856148164400149L,1025L,387315208470140928L,41162230004531989L,0L,-8045368664624463872L,11551786395229020L,577057154315888683L,9561764L,46207178071080960L,471366349959110828L,1475819562405505672L,124846L,-6752264207599140864L,5450326467991530283L,387315208482966435L,6127429059226190613L,1824121736536539188L,2305843009213693952L]}",
+      "gearData": "{\"id\":\"4db98f96-88e7-4290-9df0-e578eb200b1d\",\"attributes\":[{\"name\":\"the_vault:is_loot\",\"value\":true,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:gear_roll_type_pool\",\"value\":\"ornate0\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:gear_roll_type\",\"value\":\"Scrappy+\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:gear_model\",\"value\":\"the_vault:gear/armor/rusty_raider/chestplate\",\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:crafting_potential\",\"value\":31,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:prefixes\",\"value\":1,\"display\":{\"color\":0,\"elements\":[]}},{\"name\":\"the_vault:suffixes\",\"value\":1,\"display\":{\"color\":0,\"elements\":[]}}],\"level\":3,\"rarity\":\"SCRAPPY\",\"state\":\"IDENTIFIED\",\"maxRepairs\":3,\"usedRepairs\":0,\"implicits\":[{\"name\":\"the_vault:durability\",\"value\":526,\"display\":{\"color\":14668030,\"elements\":[\"\",\"526\",\" Durability\"]},\"legendary\":false,\"category\":\"NONE\"},{\"name\":\"the_vault:armor\",\"value\":4,\"display\":{\"color\":4766456,\"elements\":[\"\",\"4\",\" Armor\"]},\"legendary\":false,\"category\":\"NONE\"},{\"name\":\"the_vault:ability_power\",\"value\":2.5,\"display\":{\"color\":16711883,\"elements\":[\"\",\"2.5\",\" Ability Power\"]},\"legendary\":false,\"category\":\"NONE\"}],\"prefixes\":[{\"name\":\"the_vault:armor\",\"value\":2,\"display\":{\"color\":4766456,\"elements\":[\"+\",\"2\",\" Armor\"]},\"legendary\":false,\"category\":\"NONE\"}],\"suffixes\":[{\"name\":\"the_vault:item_quantity\",\"value\":0.03,\"display\":{\"color\":15239698,\"elements\":[\"+\",\"3%\",\" Item Quantity\"]},\"legendary\":false,\"category\":\"NONE\"}]}"
     },
     "HEAD": {
       "itemKey": "minecraft:iron_helmet",
       "count": 1,
-      "nbt": "{Damage:19}",
-      "gearData": "{\"id\":\"04b447c8-2ad3-40b1-b5d6-43a94f0fff7f\",\"attributes\":[]}"
+      "nbt": "{Damage:29}",
+      "gearData": "{\"id\":\"74420e5d-46e7-4736-828f-81f1d855486b\",\"attributes\":[]}"
     }
   },
   "abilities": {
     "Heal_Base": 2,
-    "Vein_Miner_Base": 1
+    "Vein_Miner_Base": 1,
+    "Farmer_Base": 1
   },
   "talents": {
-    "Strength": 1
+    "Strength": 2
   },
-  "expertises": {},
+  "expertises": {
+    "Fortuitous_Finesse": 1
+  },
   "researches": [],
   "skillTemplates": []
 }
