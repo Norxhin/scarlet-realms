@@ -59,7 +59,7 @@
     "the_vault:mining_speed": 0.0,
     "the_vault:soul_chance": 0.0,
     "the_vault:lucky_hit_chance": 0.0,
-    "the_vault:damage_increase": 0.0,
+    "the_vault:damage_increase": 0.16,
     "the_vault:damage_illagers": 0.0,
     "the_vault:damage_spiders": 0.1,
     "the_vault:damage_undead": 0.0,
